@@ -2527,7 +2527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joyStick1: {fileID: 1598668047}
   PlayerSpeed: 5
-  m_animator: {fileID: 728213952107753886}
+  m_animator: {fileID: 0}
 --- !u!1 &744821377 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9d8a595ca497d42708aa8fe6c54580b6,
