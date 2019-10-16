@@ -10,10 +10,14 @@ public class Player : MonoBehaviour
     public FixedJoystick joyStick1;
     
     public float PlayerSpeed;
+    public Animator m_animator;
+
     
     void Start()
     {
         //anim = GetComponentInChildren<Animator>();
+        m_animator = GetComponent<Animator>();
+        m_animator.SetBool("run", false);
 
         //Move.enabled = true;
         //arrow1.enabled = true;
@@ -35,7 +39,9 @@ public class Player : MonoBehaviour
         if (playerDirection.sqrMagnitude > 0.0f)
         {
             transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
+            m_animator.SetBool("run", true);
         }
+        else { m_animator.SetBool("run", false); }
     }
 
 }
