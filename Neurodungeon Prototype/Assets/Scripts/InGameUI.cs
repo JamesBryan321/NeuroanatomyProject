@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 public class InGameUI : MonoBehaviour
 {
     public Animator cameraanim;
     public Animator black;
     public GameObject UI;
     public GameObject questbook;
+    public TextMeshProUGUI scoretext;
+    public Animator door;
 
     void Start()
     {
@@ -26,10 +28,15 @@ public class InGameUI : MonoBehaviour
         StartCoroutine("BackToMenu");
     }
 
+    public void OnRightAnswer ()
+    {
+        Score.score += 25;
+        door.SetBool("opendoor", true);
+    }
     void Update()
     {
-        
-    }
+        scoretext.text = "Score: " + Score.score;
+    } 
 
     IEnumerator BackToMenu ()
     {
