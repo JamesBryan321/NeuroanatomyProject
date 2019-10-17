@@ -31,6 +31,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="ButtonScript.cs" t="Include" />
           <e p="InGameUI.cs" t="Include" />
           <e p="MenuScript.cs" t="Include" />
           <e p="Player.cs" t="Include" />

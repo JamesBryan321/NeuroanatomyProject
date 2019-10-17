@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b7c0f36-7b4f-4c5e-b0b7-1b935537c8c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Neurodungeon Prototype/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neurodungeon Prototype/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Neurodungeon Prototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Neurodungeon Prototype/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Character/PLayer.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character/PLayer.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameUI.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +12,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
@@ -34,6 +30,40 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/InGameUI.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding>
+                <marker date="1571278241741" expanded="false" signature="6:113" ph="..." />
+                <marker date="1571278241741" expanded="true" signature="152:727" ph="{...}" />
+                <marker date="1571278241741" expanded="true" signature="257:278" ph="{...}" />
+                <marker date="1571278241741" expanded="true" signature="305:355" ph="{...}" />
+                <marker date="1571278241741" expanded="true" signature="374:395" ph="{...}" />
+                <marker date="1571278241741" expanded="true" signature="426:725" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <marker date="1571278982141" expanded="false" signature="6:78" ph="..." />
+                <marker date="1571278982141" expanded="true" signature="143:493" ph="{...}" />
+                <marker date="1571278982141" expanded="true" signature="199:246" ph="{...}" />
+                <marker date="1571278982141" expanded="true" signature="278:491" ph="{...}" />
+                <marker date="1571278982141" expanded="true" signature="324:382" ph="{...}" />
+                <marker date="1571278982141" expanded="true" signature="426:485" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -41,16 +71,20 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InGameUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InGameUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="453" />
     <option name="y" value="59" />
     <option name="width" value="1145" />
@@ -118,12 +152,12 @@
       <updated>1570645499270</updated>
       <workItem from="1570645506898" duration="1224000" />
       <workItem from="1571093674342" duration="171000" />
-      <workItem from="1571272152403" duration="3886000" />
+      <workItem from="1571272152403" duration="5053000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5281000" />
+    <option name="totallyTimeSpent" value="6448000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -138,7 +172,7 @@
     <frame x="453" y="59" width="1145" height="930" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.103225805" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.103225805" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -158,7 +192,7 @@
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Unit Tests" order="13" />
       <window_info anchor="bottom" id="Terminal" order="14" />
-      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" weight="0.32998747" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -197,6 +231,36 @@
             <marker date="1571277793052" expanded="true" signature="698:763" ph="{...}" />
             <marker date="1571277793052" expanded="true" signature="924:1088" ph="{...}" />
             <marker date="1571277793052" expanded="true" signature="1103:1169" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/InGameUI.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <marker date="1571278241741" expanded="false" signature="6:113" ph="..." />
+            <marker date="1571278241741" expanded="true" signature="152:727" ph="{...}" />
+            <marker date="1571278241741" expanded="true" signature="257:278" ph="{...}" />
+            <marker date="1571278241741" expanded="true" signature="305:355" ph="{...}" />
+            <marker date="1571278241741" expanded="true" signature="374:395" ph="{...}" />
+            <marker date="1571278241741" expanded="true" signature="426:725" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ButtonScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <marker date="1571278982141" expanded="false" signature="6:78" ph="..." />
+            <marker date="1571278982141" expanded="true" signature="143:493" ph="{...}" />
+            <marker date="1571278982141" expanded="true" signature="199:246" ph="{...}" />
+            <marker date="1571278982141" expanded="true" signature="278:491" ph="{...}" />
+            <marker date="1571278982141" expanded="true" signature="324:382" ph="{...}" />
+            <marker date="1571278982141" expanded="true" signature="426:485" ph="{...}" />
           </folding>
         </state>
       </provider>

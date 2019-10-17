@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class InGameUI : MonoBehaviour
 {
-   public Animator cameraanim;
-   public Animator black;
+    public Animator cameraanim;
+    public Animator black;
     public GameObject UI;
 
     void Start()
