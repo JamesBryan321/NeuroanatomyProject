@@ -1,26 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ButtonScript : MonoBehaviour
 {
-    public Image question1;
+    public Canvas question1Canvas;
 
     private void Start()
     {
-        question1.enabled = false;
+        question1Canvas.enabled = false;
+        
     }
 
     public void OpenQuestion()
     {
-        if (question1.enabled == false)
+        if (question1Canvas.enabled == false)
         {
-            question1.enabled = true;
+            question1Canvas.enabled = true;
+            
         }
-        else if (question1.enabled == true)
+        else if (question1Canvas.enabled == true)
         {
-            question1.enabled = false;
+            question1Canvas.enabled = false;
+            
         }
     }
 }
