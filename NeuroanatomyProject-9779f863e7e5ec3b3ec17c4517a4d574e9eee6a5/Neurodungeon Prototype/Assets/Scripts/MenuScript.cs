@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MenuScript : MonoBehaviour
@@ -11,6 +10,7 @@ public class MenuScript : MonoBehaviour
 
     void Start()
     {
+        //Starts a coroutine which turns on UI after the menu opening animation
         StartCoroutine("OnMenuStart");
     }
 
@@ -21,17 +21,20 @@ public class MenuScript : MonoBehaviour
     }
     public void OnEnter ()
     {
+        //Starts scene transition
         StartCoroutine("SceneChange");
     }
 
     void Update()
     {
+        //Forces camera to look and rotate around the brain
             transform.LookAt(target);
             transform.Translate(Vector3.right * rotatespeed * Time.deltaTime);
     }
 
     IEnumerator SceneChange ()
     {
+        //Scene transition stuff happens here, sound effects should be added here
         anim.SetBool ("changescene", true);
         UI.SetActive(false);
         yield return new WaitForSeconds(2.5f);

@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class ButtonScript : MonoBehaviour
 {
@@ -16,6 +12,7 @@ public class ButtonScript : MonoBehaviour
 
     public void OpenQuestion()
     {
+        //Handles the quest book opening and closing
         if (question1Canvas.enabled == false)
         {
             question1Canvas.enabled = true;

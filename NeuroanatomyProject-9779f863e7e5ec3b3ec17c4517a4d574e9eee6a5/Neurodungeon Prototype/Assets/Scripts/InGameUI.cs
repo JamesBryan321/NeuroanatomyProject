@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -14,6 +13,7 @@ public class InGameUI : MonoBehaviour
 
     void Start()
     {
+        //Starts coroutine which turns on UI after transition animation
         StartCoroutine("OnGameStart");
     }
 
@@ -25,21 +25,25 @@ public class InGameUI : MonoBehaviour
 
     public void OnBack ()
     {
+        //Starts transition back to main menu
         StartCoroutine("BackToMenu");
     }
 
     public void OnRightAnswer ()
     {
+        //This handles the "right answer" effect 
         Score.score += 25;
         door.SetBool("opendoor", true);
     }
     void Update()
     {
+        //Updates score UI
         scoretext.text = "Score: " + Score.score;
     } 
 
     IEnumerator BackToMenu ()
     {
+        //Since this handles scene transition, any sound effects should go here
         cameraanim.SetBool("onback", true);
         black.SetBool("onback", true);
         UI.SetActive(false);

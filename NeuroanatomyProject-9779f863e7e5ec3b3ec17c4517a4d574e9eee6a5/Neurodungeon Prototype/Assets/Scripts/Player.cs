@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour
 {
@@ -18,6 +13,7 @@ public class Player : MonoBehaviour
     
     void Start()
     {
+        //Sets up components
         rb = GetComponent<Rigidbody>();
         m_animator = GetComponent<Animator>();
         m_animator.SetBool("run", false);
@@ -25,15 +21,21 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+    //Sound effects for footsteps should be added as animation events
+        //Sets up physics
         rb.velocity = new Vector3(joyStick1.Horizontal * PlayerSpeed, rb.velocity.y,
             joyStick1.Vertical * PlayerSpeed);
 
+        //Sets up animations
         if (rb.velocity.magnitude > 0)
         {
             m_animator.SetBool("run", true);
         }
 
+        //Sets up physics
         Vector3 playerDirection = Vector3.right * joyStick1.Horizontal + Vector3.forward * joyStick1.Vertical;
+
+        //Sets up animations
         if (playerDirection.sqrMagnitude > 0.0f)
         {
             rotatable.transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
