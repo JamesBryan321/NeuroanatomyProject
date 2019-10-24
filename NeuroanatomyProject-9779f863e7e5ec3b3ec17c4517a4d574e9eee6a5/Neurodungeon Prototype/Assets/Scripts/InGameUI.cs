@@ -10,6 +10,9 @@ public class InGameUI : MonoBehaviour
     public GameObject questbook;
     public TextMeshProUGUI scoretext;
     public Animator door;
+    public GameObject QuestionButton;
+    public GameObject MenuButton;
+    public GameObject MapButton;
 
     void Start()
     {
@@ -56,5 +59,35 @@ public class InGameUI : MonoBehaviour
         black.SetBool("onback", false);
         SceneManager.LoadScene("MainMenu");
 
+    }
+
+    public void OnQuestionButton () 
+    {
+        if (QuestionButton.activeSelf == false)
+        {
+            MenuButton.SetActive(false);
+            MapButton.SetActive(false);
+            QuestionButton.SetActive(true);
+        }
+    }
+
+    public void OnMenuButton()
+    {
+        if (MenuButton.activeSelf == false)
+        {
+            MenuButton.SetActive(true);
+            MapButton.SetActive(false);
+            QuestionButton.SetActive(false);
+        }
+    }
+
+    public void OnMapButton()
+    {
+        if (MapButton.activeSelf == false)
+        {
+            MenuButton.SetActive(false);
+            MapButton.SetActive(true);
+            QuestionButton.SetActive(false);
+        }
     }
 }
