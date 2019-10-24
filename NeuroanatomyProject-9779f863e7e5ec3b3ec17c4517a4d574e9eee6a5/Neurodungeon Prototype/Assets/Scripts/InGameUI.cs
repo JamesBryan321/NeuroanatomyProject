@@ -15,11 +15,16 @@ public class InGameUI : MonoBehaviour
     public GameObject MapButton;
     bool rightanswer = false;
 
+    AudioSource myAudio;
+
+    public AudioClip rightAnswer;
+    public AudioClip wrongAnswer;
 
     void Start()
     {
         //Starts coroutine which turns on UI after transition animation
         StartCoroutine("OnGameStart");
+        myAudio = GetComponent<AudioSource>();
     }
 
     IEnumerator OnGameStart()
@@ -42,6 +47,8 @@ public class InGameUI : MonoBehaviour
             Score.score += 25;
             door.SetBool("opendoor", true);
             rightanswer = true;
+            myAudio.clip = rightAnswer;
+            myAudio.Play();
         }
     }
     void Update()
@@ -99,6 +106,8 @@ public class InGameUI : MonoBehaviour
 
     public void OnWrongAnswer ()
     {
+        myAudio.clip = wrongAnswer;
+        myAudio.Play();
         Score.score -= 25;
     }
 }

@@ -5,9 +5,6 @@ using UnityEngine;
 public class TorchScript : MonoBehaviour
 {
 
-    public AudioClip TorchFadeIn;
-    public AudioClip TorchLoop;
-
     public GameObject LightSourceOne;
     public GameObject LightSourceTwo;
 
@@ -16,9 +13,6 @@ public class TorchScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        myAudio = GetComponent<AudioSource>();
-        myAudio.clip = TorchFadeIn;
 
     }
 
@@ -34,21 +28,11 @@ public class TorchScript : MonoBehaviour
         if(other.tag == "Player")
         {
 
-            myAudio.Play();
-            Invoke("TorchLooping", 15.3f);
             LightSourceOne.SetActive(true);
             LightSourceTwo.SetActive(true);
             GetComponent<Collider>().enabled = false;
 
         }
-
-    }
-
-    void TorchLooping()
-    {
-
-        myAudio.clip = TorchLoop;
-        myAudio.Play();
 
     }
 

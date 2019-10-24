@@ -4,9 +4,15 @@ public class ButtonScript : MonoBehaviour
 {
     public Canvas question1Canvas;
 
+    public AudioClip journalOpening;
+    public AudioClip journalClosing;
+
+    AudioSource myAudio;
+
     private void Start()
     {
         question1Canvas.enabled = false;
+        myAudio = GetComponent<AudioSource>();
         
     }
 
@@ -16,12 +22,14 @@ public class ButtonScript : MonoBehaviour
         if (question1Canvas.enabled == false)
         {
             question1Canvas.enabled = true;
-            
+            myAudio.clip = journalOpening;
+            myAudio.Play();
         }
         else if (question1Canvas.enabled == true)
         {
             question1Canvas.enabled = false;
-            
+            myAudio.clip = journalClosing;
+            myAudio.Play();
         }
     }
 }
