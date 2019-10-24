@@ -1064,7 +1064,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1820883471}
-  - {fileID: 476895988}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13814,7 +13813,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 476895987}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13823,8 +13822,8 @@ RectTransform:
   - {fileID: 2031295338}
   - {fileID: 171678530}
   - {fileID: 2066003938}
-  m_Father: {fileID: 34767876}
-  m_RootOrder: 1
+  m_Father: {fileID: 1820883471}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18204,7 +18203,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 695112008}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1308236160}
+        m_MethodName: OnWrongAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &695112008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48427,6 +48437,7 @@ RectTransform:
   - {fileID: 374008701}
   - {fileID: 1953992455}
   - {fileID: 377249182}
+  - {fileID: 476895988}
   m_Father: {fileID: 34767876}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -54005,7 +54016,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2031295340}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1308236160}
+        m_MethodName: OnWrongAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2031295340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54686,7 +54708,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2066003940}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1308236160}
+        m_MethodName: OnWrongAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2066003940
 MonoBehaviour:
   m_ObjectHideFlags: 0

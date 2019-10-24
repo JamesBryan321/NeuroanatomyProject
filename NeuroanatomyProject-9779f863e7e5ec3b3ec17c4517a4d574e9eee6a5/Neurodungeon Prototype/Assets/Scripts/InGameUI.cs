@@ -13,6 +13,8 @@ public class InGameUI : MonoBehaviour
     public GameObject QuestionButton;
     public GameObject MenuButton;
     public GameObject MapButton;
+    bool rightanswer = false;
+
 
     void Start()
     {
@@ -35,8 +37,12 @@ public class InGameUI : MonoBehaviour
     public void OnRightAnswer ()
     {
         //This handles the "right answer" effect 
-        Score.score += 25;
-        door.SetBool("opendoor", true);
+        if (rightanswer == false)
+        {
+            Score.score += 25;
+            door.SetBool("opendoor", true);
+            rightanswer = true;
+        }
     }
     void Update()
     {
@@ -89,5 +95,10 @@ public class InGameUI : MonoBehaviour
             MapButton.SetActive(true);
             QuestionButton.SetActive(false);
         }
+    }
+
+    public void OnWrongAnswer ()
+    {
+        Score.score -= 25;
     }
 }
