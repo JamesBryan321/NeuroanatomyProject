@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TorchAudioScript : MonoBehaviour
 {
@@ -10,7 +8,6 @@ public class TorchAudioScript : MonoBehaviour
 
     AudioSource myAudio;
 
-    // Start is called before the first frame update
     void Start()
     {
 
@@ -19,11 +16,7 @@ public class TorchAudioScript : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -35,7 +28,6 @@ public class TorchAudioScript : MonoBehaviour
             Invoke("TorchLooping", 15.3f);
          
             GetComponent<Collider>().enabled = false;
-
         }
 
     }

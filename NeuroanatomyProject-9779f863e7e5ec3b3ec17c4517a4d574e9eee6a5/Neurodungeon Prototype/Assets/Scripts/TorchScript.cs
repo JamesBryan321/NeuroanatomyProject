@@ -10,17 +10,8 @@ public class TorchScript : MonoBehaviour
 
     AudioSource myAudio;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    public GameObject[] fogplanes;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -31,6 +22,12 @@ public class TorchScript : MonoBehaviour
             LightSourceOne.SetActive(true);
             LightSourceTwo.SetActive(true);
             GetComponent<Collider>().enabled = false;
+
+            for (int i = 0; i < fogplanes.Length; i++)
+            {
+                Destroy(fogplanes[i]);
+                Score.score += 5;
+            }
 
         }
 
