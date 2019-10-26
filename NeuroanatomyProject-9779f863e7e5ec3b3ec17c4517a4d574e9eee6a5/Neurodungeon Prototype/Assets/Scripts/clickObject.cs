@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class clickObject : MonoBehaviour
+public class ClickObject : MonoBehaviour
 {
     public Material hitMaterial;
 
-    public ButtonScript bS;
+    public InGameUI UI;
     public QuestionIndexer qIndexScript;
     
     // Use this for initialization
@@ -29,7 +29,7 @@ public class clickObject : MonoBehaviour
                     rig.GetComponent<MeshRenderer>().material = hitMaterial;
                     qIndexScript = rig.GetComponent<QuestionIndexer>();
                     Debug.Log(rig.name);
-                    bS.OpenQuestion1(qIndexScript.questionIndex);
+                    UI.OpenQuestion(qIndexScript.questionIndex);
                 }
             }
         }
