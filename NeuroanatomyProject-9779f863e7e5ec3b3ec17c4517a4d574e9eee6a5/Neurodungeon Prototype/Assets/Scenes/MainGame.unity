@@ -60646,8 +60646,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1579455268805976097}
   - component: {fileID: 8890486041595088219}
-  - component: {fileID: 2571559691664118324}
-  - component: {fileID: 2571559691664118323}
   m_Layer: 0
   m_Name: Prisioner
   m_TagString: Untagged
@@ -60655,32 +60653,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2571559691664118323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2571559691664118322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f986f6cf503db104993ca007c72d84c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoint: {fileID: 2002782518}
---- !u!65 &2571559691664118324
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2571559691664118322}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7.734896, y: 6.666473, z: 9.223127}
-  m_Center: {x: 0.19770087, y: 2.833237, z: 0.2550346}
 --- !u!1 &2658663686440351299
 GameObject:
   m_ObjectHideFlags: 0
