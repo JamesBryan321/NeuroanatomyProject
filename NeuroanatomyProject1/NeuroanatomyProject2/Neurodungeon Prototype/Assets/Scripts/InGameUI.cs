@@ -1,84 +1,158 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using TMPro;
+using System.Collections;
+using UnityEngine.SceneManagement;
 public class InGameUI : MonoBehaviour
 {
-    public Animator cameraanim;
-    public Animator black;
-    public GameObject UI;
-    public GameObject questbook;
-    public TextMeshProUGUI scoretext;
-    public Animator door;
-    public GameObject QuestionButton;
-    public GameObject MenuButton;
-    public GameObject MapButton;
-    bool rightanswer = false;
-
-    AudioSource myAudio;
-
+    //Audioclips
+    public AudioClip journalOpening;
+    public AudioClip journalClosing;
     public AudioClip rightAnswer;
     public AudioClip wrongAnswer;
+    //GameObjects
+    public GameObject prisoner1;
+    public GameObject prisonCell1;
+    public GameObject UI;
+    public GameObject ingamemenu;
+    public GameObject MenuButton;
+    public GameObject MapButton;
+    public GameObject question1;
+    public GameObject question2;
+    //Animators
+    public Animator p1Animator;
+    public Animator prisonCell1Animator;
+    public Animator cameraanim;
+    public Animator black;
+    public Animator door;
+    //Audiosources
+    AudioSource myAudio;
+    public AudioSource AmbienceFadeIn;
+    public AudioSource AmbienceLoop;
+    //Texts
+    public TextMeshProUGUI scoretext;
+    //Booleans
+    bool rightanswer = false;
 
-    void Start()
+
+
+    public void Start()
     {
-        //Starts coroutine which turns on UI after transition animation
+        //Initialises things when opening the scene
         StartCoroutine("OnGameStart");
+
+        question1.SetActive(false);
+        question2.SetActive(false);
+
+        p1Animator = prisoner1.GetComponent<Animator>();
+        prisonCell1Animator = prisonCell1.GetComponent<Animator>();
+        
         myAudio = GetComponent<AudioSource>();
+        
+    }
+    
+    public void OpenMenu()
+    {
+        //Handles the in game menu that can be opened anytime
+       
+            if (ingamemenu.activeSelf == false)
+            {
+                ingamemenu.SetActive (true);
+                OnMapButton();
+                myAudio.clip = journalOpening;
+                myAudio.Play();
+                ambienceVolumeLower();
+        }
+            else if (ingamemenu.activeSelf == true)
+            {
+                ingamemenu.SetActive (false);
+                myAudio.clip = journalClosing;
+                myAudio.Play();
+                ambienceVolumeHigher();
+        }
+    }
+
+    public void OpenQuestion(int questionIndex)
+    {
+        //Handles the questions asked when interacting with game world
+        if (questionIndex == 1)
+        {
+            if (question1.activeSelf == false)
+            {
+                question1.SetActive(true);
+                myAudio.clip = journalOpening;
+                myAudio.Play();
+                ambienceVolumeLower();
+            }
+            else if (question1.activeSelf == true)
+            {
+                question1.SetActive(false);
+                myAudio.clip = journalClosing;
+                myAudio.Play();
+                ambienceVolumeHigher();
+            }
+        }
+        
+        if (questionIndex == 2)
+        {
+            if (question2.activeSelf == false)
+            {
+                question2.SetActive(true);
+                myAudio.clip = journalOpening;
+                myAudio.Play();
+                ambienceVolumeLower();
+            }
+            else if (question2.activeSelf == true)
+            {
+                question2.SetActive(false);
+                myAudio.clip = journalClosing;
+                p1Animator.SetBool("Correct", true);
+                prisonCell1Animator.SetBool("Correct", true);
+                myAudio.Play();
+                ambienceVolumeHigher();
+            }
+        }
     }
 
     IEnumerator OnGameStart()
-    {
+    { 
+        //Handles game transition
         yield return new WaitForSeconds(1f);
         UI.SetActive(true);
     }
 
-    public void OnBack ()
+    public void OnBack()
     {
         //Starts transition back to main menu
         StartCoroutine("BackToMenu");
     }
 
-    public void OnRightAnswer ()
+    public void OnRightAnswer()
     {
         //This handles the "right answer" effect 
-        /*
         if (rightanswer == false)
         {
-
-            myAudio.clip = rightAnswer;
-            myAudio.Play();
             Score.score += 25;
             door.SetBool("opendoor", true);
             rightanswer = true;
-            
+            myAudio.clip = rightAnswer;
+            myAudio.Play();
         }
-        */
-
-        //I took this out so the prison cell door could also access this function as it could not above - Chris.
-        myAudio.clip = rightAnswer;
-        myAudio.Play();
-        Score.score += 25;
-        door.SetBool("opendoor", true);
-        rightanswer = true;
-
     }
-
     void Update()
     {
         //Updates score UI
         scoretext.text = "Score: " + Score.score;
-    } 
+    }
 
-    IEnumerator BackToMenu ()
+    IEnumerator BackToMenu()
     {
         //Since this handles scene transition, any sound effects should go here
         cameraanim.SetBool("onback", true);
         black.SetBool("onback", true);
         UI.SetActive(false);
-        if (questbook.activeSelf == true)
+        if (ingamemenu.activeSelf == true)
         {
-            questbook.SetActive(false);
+            ingamemenu.SetActive(false);
         }
         yield return new WaitForSeconds(3f);
         cameraanim.SetBool("onback", false);
@@ -87,40 +161,47 @@ public class InGameUI : MonoBehaviour
 
     }
 
-    public void OnQuestionButton () 
-    {
-        if (QuestionButton.activeSelf == false)
-        {
-            MenuButton.SetActive(false);
-            MapButton.SetActive(false);
-            QuestionButton.SetActive(true);
-        }
-    }
-
     public void OnMenuButton()
     {
+        //Handles the "menu" section on in game ui
         if (MenuButton.activeSelf == false)
         {
             MenuButton.SetActive(true);
             MapButton.SetActive(false);
-            QuestionButton.SetActive(false);
         }
     }
 
     public void OnMapButton()
     {
+        //Handles the "map" section on in game ui
         if (MapButton.activeSelf == false)
         {
             MenuButton.SetActive(false);
             MapButton.SetActive(true);
-            QuestionButton.SetActive(false);
         }
     }
 
-    public void OnWrongAnswer ()
+    public void OnWrongAnswer()
     {
+        //Handles the wrong answers
         myAudio.clip = wrongAnswer;
         myAudio.Play();
         Score.score -= 25;
+    }
+
+    void ambienceVolumeLower()
+    {
+
+        AmbienceFadeIn.volume = 0.13f;
+        AmbienceLoop.volume = 0.13f;
+
+    }
+
+    void ambienceVolumeHigher()
+    {
+
+        AmbienceFadeIn.volume = 0.5f;
+        AmbienceLoop.volume = 0.5f;
+
     }
 }

@@ -1,13 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PrisonerSaved : MonoBehaviour
 {
     public Transform waypoint;
 
-    public void OnSaving ()
+    public void OnTriggerEnter (Collider other)
     {
-        transform.position = waypoint.position;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            transform.position = waypoint.position;
+        }
     }
 }
