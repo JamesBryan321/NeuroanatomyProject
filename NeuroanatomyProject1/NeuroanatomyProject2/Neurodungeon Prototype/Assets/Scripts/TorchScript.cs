@@ -12,6 +12,14 @@ public class TorchScript : MonoBehaviour
 
     public GameObject[] fogplanes;
 
+    void Start()
+    {
+
+        LightSourceOne.SetActive(false);
+        LightSourceTwo.SetActive(false);
+
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {

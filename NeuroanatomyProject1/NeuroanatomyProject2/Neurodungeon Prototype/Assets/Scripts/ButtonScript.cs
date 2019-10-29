@@ -17,6 +17,8 @@ public class ButtonScript : MonoBehaviour
     public GameObject prisonCell1;
     public Animator prisonCell1Animator;
 
+    public AudioSource AmbienceFadeIn;
+    public AudioSource AmbienceLoop;
     AudioSource myAudio;
 
     private void Start()
@@ -40,13 +42,17 @@ public class ButtonScript : MonoBehaviour
                 uIScript.OnMapButton();
                 myAudio.clip = journalOpening;
                 myAudio.Play();
-            }
+            ambienceVolumeLower();
+
+        }
             else if (menuCanvas.enabled == true)
             {
                 menuCanvas.enabled = false;
                 myAudio.clip = journalClosing;
                 myAudio.Play();
-            }
+            ambienceVolumeHigher();
+
+        }
     }
 
     public void OpenQuestion1(int questionIndex)
@@ -58,12 +64,14 @@ public class ButtonScript : MonoBehaviour
                 question1Canvas.enabled = true;
                 myAudio.clip = journalOpening;
                 myAudio.Play();
+                ambienceVolumeLower();
             }
             else if (question1Canvas.enabled == true)
             {
                 question1Canvas.enabled = false;
                 myAudio.clip = journalClosing;
                 myAudio.Play();
+                ambienceVolumeHigher();
             }
         }
         
@@ -74,6 +82,7 @@ public class ButtonScript : MonoBehaviour
                 question2Canvas.enabled = true;
                 myAudio.clip = journalOpening;
                 myAudio.Play();
+                ambienceVolumeLower();
             }
             else if (question2Canvas.enabled == true)
             {
@@ -82,7 +91,25 @@ public class ButtonScript : MonoBehaviour
                 p1Animator.SetBool("Correct", true);
                 prisonCell1Animator.SetBool("Correct", true);
                 myAudio.Play();
+                ambienceVolumeHigher();
             }
         }
     }
+
+    void ambienceVolumeLower()
+    {
+
+        AmbienceFadeIn.volume = 0.13f;
+        AmbienceLoop.volume = 0.13f;
+
+    }
+
+    void ambienceVolumeHigher()
+    {
+
+        AmbienceFadeIn.volume = 0.5f;
+        AmbienceLoop.volume = 0.5f;
+
+    }
+
 }

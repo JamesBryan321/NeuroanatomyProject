@@ -42,15 +42,28 @@ public class InGameUI : MonoBehaviour
     public void OnRightAnswer ()
     {
         //This handles the "right answer" effect 
+        /*
         if (rightanswer == false)
         {
+
+            myAudio.clip = rightAnswer;
+            myAudio.Play();
             Score.score += 25;
             door.SetBool("opendoor", true);
             rightanswer = true;
-            myAudio.clip = rightAnswer;
-            myAudio.Play();
+            
         }
+        */
+
+        //I took this out so the prison cell door could also access this function as it could not above - Chris.
+        myAudio.clip = rightAnswer;
+        myAudio.Play();
+        Score.score += 25;
+        door.SetBool("opendoor", true);
+        rightanswer = true;
+
     }
+
     void Update()
     {
         //Updates score UI
