@@ -26,6 +26,7 @@ public class InGameUI : MonoBehaviour
     public Animator door;
     //Audiosources
     AudioSource myAudio;
+    public AudioSource answersAudio;
     public AudioSource AmbienceFadeIn;
     public AudioSource AmbienceLoop;
     //Texts
@@ -130,13 +131,18 @@ public class InGameUI : MonoBehaviour
     {
         //This handles the "right answer" effect 
         if (rightanswer == false)
+            
         {
+            answersAudio.clip = rightAnswer;
+            answersAudio.Play();
             Score.score += 25;
             door.SetBool("opendoor", true);
             rightanswer = true;
-            myAudio.clip = rightAnswer;
-            myAudio.Play();
+            rightanswer = false;
+            
         }
+
+
     }
     void Update()
     {
@@ -184,8 +190,8 @@ public class InGameUI : MonoBehaviour
     public void OnWrongAnswer()
     {
         //Handles the wrong answers
-        myAudio.clip = wrongAnswer;
-        myAudio.Play();
+        answersAudio.clip = wrongAnswer;
+        answersAudio.Play();
         Score.score -= 25;
     }
 
