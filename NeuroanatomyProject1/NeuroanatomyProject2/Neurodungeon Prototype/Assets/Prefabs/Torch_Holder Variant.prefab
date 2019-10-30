@@ -1,5 +1,63 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &26622077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 26622078}
+  - component: {fileID: 26622079}
+  - component: {fileID: 26622080}
+  m_Layer: 0
+  m_Name: FogArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &26622078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26622077}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1928952509411365229}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &26622079
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26622077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.3361068, y: 1, z: 3.625478}
+  m_Center: {x: -0.12630075, y: 0, z: 1.3127402}
+--- !u!114 &26622080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26622077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bce850bea9a9afb49be0f42052fd558d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torch: {fileID: 1286585965}
 --- !u!1 &1003326746
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +214,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TorchFadeIn: {fileID: 8300000, guid: 641c964c133572148bb835df01e656ba, type: 3}
   TorchLoop: {fileID: 8300000, guid: 0e0e74805ec9a8d43abf7962e38c5648, type: 3}
-  fogplanes: []
 --- !u!1 &1439247134
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +370,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TorchFadeIn: {fileID: 8300000, guid: 641c964c133572148bb835df01e656ba, type: 3}
   TorchLoop: {fileID: 8300000, guid: 0e0e74805ec9a8d43abf7962e38c5648, type: 3}
-  fogplanes: []
 --- !u!1 &1444226862
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1444226863
 Transform:
   m_ObjectHideFlags: 0
@@ -421,7 +477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1767499947
 Transform:
   m_ObjectHideFlags: 0
@@ -523,6 +579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightSourceOne: {fileID: 1444226862}
   LightSourceTwo: {fileID: 1767499946}
+  fogs: []
 --- !u!1001 &6899427599522136562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -592,16 +649,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a5433039b20e34632830ac767c885081,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: a5433039b20e34632830ac767c885081,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: a5433039b20e34632830ac767c885081,
-        type: 3}
       propertyPath: m_LocalScale.z
       value: -0.79980487
       objectReference: {fileID: 0}
@@ -628,17 +675,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a5433039b20e34632830ac767c885081,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.191
+      value: 24.109947
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a5433039b20e34632830ac767c885081,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.917921
+      value: -3.5856595
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a5433039b20e34632830ac767c885081,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -54.777645
+      value: -75.083466
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a5433039b20e34632830ac767c885081,
         type: 3}
@@ -683,7 +730,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a5433039b20e34632830ac767c885081,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.8756998
+      value: 2.8757017
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a5433039b20e34632830ac767c885081,
         type: 3}
@@ -693,7 +740,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a5433039b20e34632830ac767c885081,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.8756998
+      value: 2.8757017
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5433039b20e34632830ac767c885081, type: 3}

@@ -10,11 +10,11 @@ public class TorchScript : MonoBehaviour
 
     AudioSource myAudio;
 
-    public GameObject[] fogplanes;
+    public List <GameObject>  fogs = new List <GameObject> ();
 
     void Start()
     {
-
+        
         LightSourceOne.SetActive(false);
         LightSourceTwo.SetActive(false);
 
@@ -31,9 +31,9 @@ public class TorchScript : MonoBehaviour
             LightSourceTwo.SetActive(true);
             GetComponent<Collider>().enabled = false;
 
-            for (int i = 0; i < fogplanes.Length; i++)
+            foreach (GameObject fog in fogs)
             {
-                Destroy(fogplanes[i]);
+                Destroy(fog);
                 Score.score += 5;
             }
 

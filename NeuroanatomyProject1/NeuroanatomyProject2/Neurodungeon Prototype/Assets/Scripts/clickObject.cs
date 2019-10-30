@@ -8,10 +8,10 @@ public class clickObject : MonoBehaviour
 
     public InGameUI UI;
     public QuestionIndexer qIndexScript;
-    
+
     // Use this for initialization
     void Start () {
-		
+
     }
 	
     // Update is called once per frame
@@ -21,7 +21,8 @@ public class clickObject : MonoBehaviour
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo))
+            int layer_mask = LayerMask.GetMask("Interactable");
+            if (Physics.Raycast(ray, out hitInfo, 1000, layer_mask))
             {
                 var rig = hitInfo.collider;
                 if(rig.CompareTag("Interactable"))
