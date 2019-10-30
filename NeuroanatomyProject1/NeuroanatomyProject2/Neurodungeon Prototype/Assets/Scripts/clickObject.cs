@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClickObject : MonoBehaviour
+public class clickObject : MonoBehaviour
 {
     public Material hitMaterial;
 
