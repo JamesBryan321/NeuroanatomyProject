@@ -30,6 +30,7 @@ public class ClickObject : MonoBehaviour
                     qIndexScript = rig.GetComponent<QuestionIndexer>();
                     Debug.Log(rig.name);
                     UI.OpenQuestion(qIndexScript.questionIndex);
+                    rig.tag = "notInteractable";
                 }
             }
         }
