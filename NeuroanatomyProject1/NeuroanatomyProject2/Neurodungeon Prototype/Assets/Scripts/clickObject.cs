@@ -27,11 +27,10 @@ public class clickObject : MonoBehaviour
                 var rig = hitInfo.collider;
                 if(rig.CompareTag("Interactable"))
                 {
-                    rig.GetComponent<MeshRenderer>().material = hitMaterial;
+                   //rig.GetComponent<MeshRenderer>().material = hitMaterial;
                     qIndexScript = rig.GetComponent<QuestionIndexer>();
                     Debug.Log(rig.name);
                     UI.OpenQuestion(qIndexScript.questionIndex);
-                    rig.tag = "notInteractable";
                 }
             }
         }

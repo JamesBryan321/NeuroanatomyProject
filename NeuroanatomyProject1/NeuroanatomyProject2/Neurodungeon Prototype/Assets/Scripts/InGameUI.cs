@@ -67,7 +67,7 @@ public class InGameUI : MonoBehaviour
             else if (ingamemenu.activeSelf == true)
             {
                 ingamemenu.SetActive (false);
-            clue1.SetActive(false);
+                clue1.SetActive(false);
                 journalClosingSound();
                 ambienceVolumeHigher();
         }
@@ -87,6 +87,7 @@ public class InGameUI : MonoBehaviour
             else if (question1.activeSelf == true)
             {
                 question1.SetActive(false);
+                GameObject.Find("Door1").tag = "notInteractable";
                 journalClosingSound();
                 ambienceVolumeHigher();
             }
@@ -104,6 +105,7 @@ public class InGameUI : MonoBehaviour
             else if (question2.activeSelf == true)
             {
                 question2.SetActive(false);
+                GameObject.Find("Prison_Door").tag = "notInteractable";
                 journalClosingSound();
                 p1Animator.SetBool("Correct", true);
                 prisonCell1Animator.SetBool("Correct", true);            
@@ -122,13 +124,37 @@ public class InGameUI : MonoBehaviour
             else if (clue1.activeSelf == true)
             {
                 clue1.SetActive(false);
-                ingamemenu.SetActive(true);
                 journalClosingSound();
                 ambienceVolumeHigher();
             }
         }
     }
 
+    public void ExitQuestion (int questionIndex)
+    {
+        //Handles exiting questions with no answer selected
+        if (questionIndex == 1)
+        {
+                question1.SetActive(false);
+                journalClosingSound();
+                ambienceVolumeHigher();
+        }
+
+        if (questionIndex == 2)
+        {
+           
+                question2.SetActive(false);
+                journalClosingSound();
+                ambienceVolumeHigher();
+        }
+
+        if (questionIndex == 3)
+        {
+                clue1.SetActive(false);
+                journalClosingSound();
+                ambienceVolumeHigher();
+        }
+    }
     IEnumerator OnGameStart()
     { 
         //Handles game transition
