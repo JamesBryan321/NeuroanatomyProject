@@ -5,27 +5,30 @@ using UnityEngine;
 public class FootstepAudioScript : MonoBehaviour
 {
 
-    public AudioClip footstep;
-    public AudioClip footsteptwo;
+    //AudioClips
+    public AudioClip footstepOne;
+    public AudioClip footstepTwo;
     public AudioClip rugFootstepOne;
     public AudioClip rugFootstepTwo;
+    public AudioClip waterFootstepOne;
+    public AudioClip waterFootstepTwo;
 
+    //Bools
     bool RugAudio;
+    bool WaterAudio;
 
+    //AudioSource
     public AudioSource myAudio;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        WaterAudio = false;
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //Handles entering trigger colliders
     private void OnTriggerEnter(Collider other)
     {
         
@@ -36,16 +39,17 @@ public class FootstepAudioScript : MonoBehaviour
 
         }
 
+        if(other.tag == "Water")
+        {
+
+            Invoke("touchingWater", 0.1f);
+
+        }
+
 
     }
 
-    void touchingRug()
-    {
-
-        RugAudio = true;
-
-    }
-
+    //Handles exiting trigger colliders
     private void OnTriggerExit(Collider other)
     {
 
@@ -56,8 +60,32 @@ public class FootstepAudioScript : MonoBehaviour
 
         }
 
+        if (other.tag == "Water")
+        {
+
+            WaterAudio = false;
+
+        }
+
     }
 
+    //function to enable rug footsteps
+    void touchingRug()
+    {
+
+        RugAudio = true;
+
+    }
+
+    //function to enable water footsteps
+    void touchingWater()
+    {
+
+        WaterAudio = true;
+
+    }
+
+    //controls which footstep clips are playing depending on above bools. Randomizes volume and pitch for repeatability.
     public void FootStep()
     {
 
@@ -69,17 +97,26 @@ public class FootstepAudioScript : MonoBehaviour
             myAudio.pitch = Random.Range(0.6f, 1.3f);
 
         }
+        else if(WaterAudio == true)
+        {
+
+            myAudio.PlayOneShot(waterFootstepOne);
+            myAudio.volume = Random.Range(0.12f, 0.18f);
+            myAudio.pitch = Random.Range(0.6f, 1.3f);
+
+        }
         else
         {
 
-            myAudio.PlayOneShot(footstep);
-            myAudio.volume = Random.Range(0.05f, 0.11f);
+            myAudio.PlayOneShot(footstepOne);
+            myAudio.volume = Random.Range(0.03f, 0.09f);
             myAudio.pitch = Random.Range(0.6f, 1.3f);
 
         }
 
     }
 
+    //controls which footstep clips are playing depending on above bools. Randomizes volume and pitch for repeatability.
     public void FootStepTwo()
     {
 
@@ -91,11 +128,19 @@ public class FootstepAudioScript : MonoBehaviour
             myAudio.pitch = Random.Range(0.6f, 1.3f);
 
         }
+        else if (WaterAudio == true)
+        {
+
+            myAudio.PlayOneShot(waterFootstepTwo);
+            myAudio.volume = Random.Range(0.12f, 0.18f);
+            myAudio.pitch = Random.Range(0.6f, 1.3f);
+
+        }
         else
         {
 
-            myAudio.PlayOneShot(footsteptwo);
-            myAudio.volume = Random.Range(0.05f, 0.11f);
+            myAudio.PlayOneShot(footstepTwo);
+            myAudio.volume = Random.Range(0.03f, 0.09f);
             myAudio.pitch = Random.Range(0.6f, 1.3f);
 
         }

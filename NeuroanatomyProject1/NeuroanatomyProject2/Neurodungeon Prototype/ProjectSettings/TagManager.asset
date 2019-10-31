@@ -8,6 +8,7 @@ TagManager:
   - Rug
   - notInteractable
   - Fog
+  - Water
   layers:
   - Default
   - TransparentFX

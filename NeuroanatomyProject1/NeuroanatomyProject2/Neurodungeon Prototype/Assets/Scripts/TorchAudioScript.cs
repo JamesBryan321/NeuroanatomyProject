@@ -13,7 +13,7 @@ public class TorchAudioScript : MonoBehaviour
 
         myAudio = GetComponent<AudioSource>();
         myAudio.clip = TorchFadeIn;
-        myAudio.volume = 0.075f;
+        myAudio.volume = 0.05f;
 
     }
 

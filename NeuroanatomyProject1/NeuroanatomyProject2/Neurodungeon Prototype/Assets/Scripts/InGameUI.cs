@@ -9,6 +9,7 @@ public class InGameUI : MonoBehaviour
     public AudioClip journalClosing;
     public AudioClip rightAnswer;
     public AudioClip wrongAnswer;
+    public AudioClip pageTurning;
     //GameObjects
     public GameObject prisoner1;
     public GameObject prisonCell1;
@@ -27,8 +28,7 @@ public class InGameUI : MonoBehaviour
     //Audiosources
     AudioSource myAudio;
     public AudioSource answersAudio;
-    public AudioSource AmbienceFadeIn;
-    public AudioSource AmbienceLoop;
+    public AudioListener audioListener;
     //Texts
     public TextMeshProUGUI scoretext;
     //Booleans
@@ -59,15 +59,13 @@ public class InGameUI : MonoBehaviour
             {
                 ingamemenu.SetActive (true);
                 OnMapButton();
-                myAudio.clip = journalOpening;
-                myAudio.Play();
+                journalOpeningSound();
                 ambienceVolumeLower();
         }
             else if (ingamemenu.activeSelf == true)
             {
                 ingamemenu.SetActive (false);
-                myAudio.clip = journalClosing;
-                myAudio.Play();
+                journalClosingSound();
                 ambienceVolumeHigher();
         }
     }
@@ -80,15 +78,13 @@ public class InGameUI : MonoBehaviour
             if (question1.activeSelf == false)
             {
                 question1.SetActive(true);
-                myAudio.clip = journalOpening;
-                myAudio.Play();
+                journalOpeningSound();
                 ambienceVolumeLower();
             }
             else if (question1.activeSelf == true)
             {
                 question1.SetActive(false);
-                myAudio.clip = journalClosing;
-                myAudio.Play();
+                journalClosingSound();
                 ambienceVolumeHigher();
             }
         }
@@ -98,17 +94,15 @@ public class InGameUI : MonoBehaviour
             if (question2.activeSelf == false)
             {
                 question2.SetActive(true);
-                myAudio.clip = journalOpening;
-                myAudio.Play();
+                journalOpeningSound();
                 ambienceVolumeLower();
             }
             else if (question2.activeSelf == true)
             {
                 question2.SetActive(false);
-                myAudio.clip = journalClosing;
+                journalClosingSound();
                 p1Animator.SetBool("Correct", true);
-                prisonCell1Animator.SetBool("Correct", true);
-                myAudio.Play();
+                prisonCell1Animator.SetBool("Correct", true);            
                 ambienceVolumeHigher();
             }
         }
@@ -133,6 +127,7 @@ public class InGameUI : MonoBehaviour
         if (rightanswer == false)
             
         {
+            answersAudio.volume = 0.05f;
             answersAudio.clip = rightAnswer;
             answersAudio.Play();
             Score.score += 25;
@@ -173,6 +168,7 @@ public class InGameUI : MonoBehaviour
         if (MenuButton.activeSelf == false)
         {
             MenuButton.SetActive(true);
+            pageTurningSound();
             MapButton.SetActive(false);
         }
     }
@@ -183,6 +179,7 @@ public class InGameUI : MonoBehaviour
         if (MapButton.activeSelf == false)
         {
             MenuButton.SetActive(false);
+            pageTurningSound();
             MapButton.SetActive(true);
         }
     }
@@ -190,6 +187,7 @@ public class InGameUI : MonoBehaviour
     public void OnWrongAnswer()
     {
         //Handles the wrong answers
+        answersAudio.volume = 0.245f;
         answersAudio.clip = wrongAnswer;
         answersAudio.Play();
         Score.score -= 25;
@@ -197,17 +195,46 @@ public class InGameUI : MonoBehaviour
 
     void ambienceVolumeLower()
     {
-
-        AmbienceFadeIn.volume = 0.13f;
-        AmbienceLoop.volume = 0.13f;
+        
+        AudioListener.volume = 0.3f;
 
     }
 
     void ambienceVolumeHigher()
     {
-
-        AmbienceFadeIn.volume = 0.5f;
-        AmbienceLoop.volume = 0.5f;
+        
+        AudioListener.volume = 1f;
 
     }
+
+    void journalOpeningSound()
+    {
+
+        myAudio.pitch = 1f;
+        myAudio.volume = 0.38f;
+        myAudio.clip = journalOpening;
+        myAudio.Play();
+
+    }
+
+    void journalClosingSound()
+    {
+
+        myAudio.pitch = 1f;
+        myAudio.volume = 0.16f;
+        myAudio.clip = journalClosing;
+        myAudio.Play();
+
+    }
+
+    void pageTurningSound()
+    {
+
+        myAudio.pitch = 1.1f;
+        myAudio.volume = 0.765f;
+        myAudio.clip = pageTurning;
+        myAudio.Play();
+
+    }
+
 }
