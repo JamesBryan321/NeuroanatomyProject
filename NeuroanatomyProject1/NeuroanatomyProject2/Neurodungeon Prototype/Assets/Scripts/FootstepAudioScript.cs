@@ -28,27 +28,6 @@ public class FootstepAudioScript : MonoBehaviour
 
     }
 
-    //Handles entering trigger colliders
-    private void OnTriggerEnter(Collider other)
-    {
-        
-        if(other.tag == "Rug")
-        {
-
-            Invoke("touchingRug", 0.1f);
-
-        }
-
-        if(other.tag == "Water")
-        {
-
-            Invoke("touchingWater", 0.1f);
-
-        }
-
-
-    }
-
     //Handles exiting trigger colliders
     private void OnTriggerExit(Collider other)
     {
@@ -69,8 +48,28 @@ public class FootstepAudioScript : MonoBehaviour
 
     }
 
-    //function to enable rug footsteps
-    void touchingRug()
+    //Handles entering trigger colliders
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.tag == "Rug")
+        {
+
+            Invoke("touchingRug", 0.15f);
+
+        }
+
+        if (other.tag == "Water")
+        {
+
+            touchingWater();
+
+        }
+
+    }
+
+        //function to enable rug footsteps
+        void touchingRug()
     {
 
         RugAudio = true;

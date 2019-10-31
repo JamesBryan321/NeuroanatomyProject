@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class AreaComplete : MonoBehaviour
 {
+
+    public AudioSource gameManagementAudio;
+
+    public AudioClip scoreSound;
+
     public List<GameObject> fogs = new List<GameObject>();
     private void OnTriggerEnter(Collider other)
     {
@@ -19,8 +24,20 @@ public class AreaComplete : MonoBehaviour
         if (fogs.Count == 0)
         {
             Score.score += 200;
-            //Chris add sfx here
+
+            playScoreSound();
+
             Destroy(this);
         }
     }
+
+    void playScoreSound()
+    {
+
+        gameManagementAudio.volume = 0.16f;
+        gameManagementAudio.clip = scoreSound;
+        gameManagementAudio.Play();
+
+    }
+
 }
