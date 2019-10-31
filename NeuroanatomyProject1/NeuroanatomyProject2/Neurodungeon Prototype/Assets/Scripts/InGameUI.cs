@@ -19,6 +19,7 @@ public class InGameUI : MonoBehaviour
     public GameObject MapButton;
     public GameObject question1;
     public GameObject question2;
+    public GameObject clue1;
     //Animators
     public Animator p1Animator;
     public Animator prisonCell1Animator;
@@ -43,6 +44,7 @@ public class InGameUI : MonoBehaviour
 
         question1.SetActive(false);
         question2.SetActive(false);
+        clue1.SetActive(false);
 
         p1Animator = prisoner1.GetComponent<Animator>();
         prisonCell1Animator = prisonCell1.GetComponent<Animator>();
@@ -65,6 +67,7 @@ public class InGameUI : MonoBehaviour
             else if (ingamemenu.activeSelf == true)
             {
                 ingamemenu.SetActive (false);
+            clue1.SetActive(false);
                 journalClosingSound();
                 ambienceVolumeHigher();
         }
@@ -87,6 +90,7 @@ public class InGameUI : MonoBehaviour
                 journalClosingSound();
                 ambienceVolumeHigher();
             }
+         
         }
         
         if (questionIndex == 2)
@@ -103,6 +107,23 @@ public class InGameUI : MonoBehaviour
                 journalClosingSound();
                 p1Animator.SetBool("Correct", true);
                 prisonCell1Animator.SetBool("Correct", true);            
+                ambienceVolumeHigher();
+            }
+        }
+
+        if (questionIndex == 3)
+        {
+            if (clue1.activeSelf == false)
+            {
+                clue1.SetActive(true);
+                journalOpeningSound();
+                ambienceVolumeLower();
+            }
+            else if (clue1.activeSelf == true)
+            {
+                clue1.SetActive(false);
+                ingamemenu.SetActive(true);
+                journalClosingSound();
                 ambienceVolumeHigher();
             }
         }
