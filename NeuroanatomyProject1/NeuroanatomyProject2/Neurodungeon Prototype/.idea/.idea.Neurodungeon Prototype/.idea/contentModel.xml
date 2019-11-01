@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\shane\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\shane\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Neurodungeon Prototype.-1474630657.00" t="ExcludeRecursive" />
-    <e p="C:\Users\shane\Documents\GitHub\NeuroanatomyProject\NeuroanatomyProject-9779f863e7e5ec3b3ec17c4517a4d574e9eee6a5\Neurodungeon Prototype" t="IncludeRecursive">
+    <e p="C:\Users\shane\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Neurodungeon Prototype.-1910195271.00" t="ExcludeRecursive" />
+    <e p="C:\Users\shane\AppData\local\Android\Sdk\platforms\android-28\data\res" t="IncludeRecursive" />
+    <e p="C:\Users\shane\AppData\local\Android\Sdk\sources\android-28" t="IncludeRecursive" />
+    <e p="E:\Git Repo\NeuroanatomyProject\NeuroanatomyProject1\NeuroanatomyProject2\Neurodungeon Prototype" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -33,16 +35,27 @@
         <e p="Materials" t="Include">
           <e p="Fog-Altitude.shader" t="Include" />
         </e>
+        <e p="Polygonal Particles" t="Include">
+          <e p="Assets" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="GradientBackgroundShader.shader" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="AmbienceLoopScript.cs" t="Include" />
-          <e p="ButtonScript.cs" t="Include" />
+          <e p="AreaComplete.cs" t="Include" />
           <e p="clickObject.cs" t="Include" />
+          <e p="ClosePopUp.cs" t="Include" />
+          <e p="DoorAudioScript.cs" t="Include" />
+          <e p="FogArea.cs" t="Include" />
           <e p="FogofWar.cs" t="Include" />
           <e p="FootstepAudioScript.cs" t="Include" />
           <e p="InGameUI.cs" t="Include" />
           <e p="Key.cs" t="Include" />
           <e p="MenuScript.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="PrisonerAudio.cs" t="Include" />
           <e p="PrisonerSaved.cs" t="Include" />
           <e p="QuestionIndexer.cs" t="Include" />
           <e p="Score.cs" t="Include" />
