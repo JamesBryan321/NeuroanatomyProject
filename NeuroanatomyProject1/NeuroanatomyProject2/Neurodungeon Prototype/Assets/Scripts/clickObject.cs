@@ -1,22 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class clickObject : MonoBehaviour
 {
     public Material hitMaterial;
-
     public InGameUI UI;
     public QuestionIndexer qIndexScript;
 
-    // Use this for initialization
-    void Start () {
 
-    }
-	
-    // Update is called once per frame
     void Update () 
     {
+        //Checks if player clicks on interactable objects
         if (Input.GetMouseButtonDown(0))
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -27,7 +20,6 @@ public class clickObject : MonoBehaviour
                 var rig = hitInfo.collider;
                 if(rig.CompareTag("Interactable"))
                 {
-                   //rig.GetComponent<MeshRenderer>().material = hitMaterial;
                     qIndexScript = rig.GetComponent<QuestionIndexer>();
                     Debug.Log(rig.name);
                     UI.OpenQuestion(qIndexScript.questionIndex);

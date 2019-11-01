@@ -240,6 +240,7 @@ public class InGameUI : MonoBehaviour
         Score.score -= 25;
     }
 
+    //Various sound functions
     void ambienceVolumeLower()
     {
         
