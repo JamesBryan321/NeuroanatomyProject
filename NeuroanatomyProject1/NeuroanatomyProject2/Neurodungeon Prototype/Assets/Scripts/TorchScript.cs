@@ -6,6 +6,8 @@ public class TorchScript : MonoBehaviour
 
     public GameObject LightSourceOne;
     public GameObject LightSourceTwo;
+    public bool UncoverMap;
+    public GameObject MapPart;
 
     AudioSource myAudio;
 
@@ -34,6 +36,10 @@ public class TorchScript : MonoBehaviour
             {
                 Destroy(fog);
                 Score.score += 5;
+            }
+            if (UncoverMap == true)
+            {
+                MapPart.SetActive(true);
             }
 
         }
