@@ -4,7 +4,8 @@ public class clickObject : MonoBehaviour
 {
     public Material hitMaterial;
     public InGameUI UI;
-    public QuestionIndexer qIndexScript;
+    public ToggleObjectCanvas canvasToggle;
+    public GameObject clickedObject;
 
 
     void Update () 
@@ -14,15 +15,15 @@ public class clickObject : MonoBehaviour
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
-            int layer_mask = LayerMask.GetMask("Interactable");
-            if (Physics.Raycast(ray, out hitInfo, 1000, layer_mask))
+            //int layer_mask = LayerMask.GetMask("Interactable"); this variable shouldn't be necessary?
+            if (Physics.Raycast(ray, out hitInfo, 1000/*, layer_mask*/))
             {
                 var rig = hitInfo.collider;
                 if(rig.CompareTag("Interactable"))
                 {
-                    qIndexScript = rig.GetComponent<QuestionIndexer>();
+                    canvasToggle = rig.GetComponent<ToggleObjectCanvas>();
                     Debug.Log(rig.name);
-                    UI.OpenQuestion(qIndexScript.questionIndex);
+                    canvasToggle.ToggleCanvas();
                 }
             }
         }

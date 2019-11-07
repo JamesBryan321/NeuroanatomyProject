@@ -46,8 +46,10 @@
           <e p="AmbienceLoopScript.cs" t="Include" />
           <e p="AreaComplete.cs" t="Include" />
           <e p="clickObject.cs" t="Include" />
+          <e p="CloseInteractable.cs" t="Include" />
           <e p="ClosePopUp.cs" t="Include" />
           <e p="DoorAudioScript.cs" t="Include" />
+          <e p="EyeScript.cs" t="Include" />
           <e p="FogArea.cs" t="Include" />
           <e p="FogofWar.cs" t="Include" />
           <e p="FootstepAudioScript.cs" t="Include" />
@@ -59,6 +61,7 @@
           <e p="PrisonerSaved.cs" t="Include" />
           <e p="QuestionIndexer.cs" t="Include" />
           <e p="Score.cs" t="Include" />
+          <e p="ToggleObjectCanvas.cs" t="Include" />
           <e p="TorchAudioScript.cs" t="Include" />
           <e p="TorchScript.cs" t="Include" />
         </e>
