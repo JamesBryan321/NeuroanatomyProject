@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class AreaComplete : MonoBehaviour
@@ -9,6 +10,8 @@ public class AreaComplete : MonoBehaviour
     public AudioClip scoreSound;
 
     public List<GameObject> fogs = new List<GameObject>();
+
+    public GameObject completeText;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Fog")
@@ -26,6 +29,8 @@ public class AreaComplete : MonoBehaviour
 
             playScoreSound();
 
+            StartCoroutine("TextUI");
+
             Destroy(this);
         }
     }
@@ -37,6 +42,13 @@ public class AreaComplete : MonoBehaviour
         gameManagementAudio.clip = scoreSound;
         gameManagementAudio.Play();
 
+    }
+
+    IEnumerator TextUI ()
+    {
+        completeText.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        completeText.SetActive(false);
     }
 
 }
