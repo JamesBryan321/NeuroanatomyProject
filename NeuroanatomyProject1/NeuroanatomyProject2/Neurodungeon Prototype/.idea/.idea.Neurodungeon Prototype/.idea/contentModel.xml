@@ -48,6 +48,7 @@
           <e p="clickObject.cs" t="Include" />
           <e p="CloseInteractable.cs" t="Include" />
           <e p="ClosePopUp.cs" t="Include" />
+          <e p="Destructable.cs" t="Include" />
           <e p="DoorAudioScript.cs" t="Include" />
           <e p="EyeScript.cs" t="Include" />
           <e p="FogArea.cs" t="Include" />

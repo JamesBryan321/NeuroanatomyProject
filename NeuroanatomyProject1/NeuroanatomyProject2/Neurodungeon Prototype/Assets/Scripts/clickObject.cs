@@ -25,6 +25,12 @@ public class clickObject : MonoBehaviour
                     Debug.Log(rig.name);
                     canvasToggle.ToggleCanvas();
                 }
+                else
+                {
+                    {
+                        Debug.Log(rig.name);
+                    }
+                }
             }
         }
 

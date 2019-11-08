@@ -172,20 +172,34 @@ public class InGameUI : MonoBehaviour
     {
         //This handles the "right answer" effect 
         if (rightanswer == false)
-            
+
         {
             answersAudio.volume = 0.05f;
             answersAudio.clip = rightAnswer;
             answersAudio.Play();
             Score.score += 25;
             door.SetBool("opendoor", true);
+            
             rightanswer = true;
             rightanswer = false;
-            
+
+        }
+    }
+
+    public void OnPrisonRightAnswer()
+        {
+            answersAudio.volume = 0.05f;
+            answersAudio.clip = rightAnswer;
+            answersAudio.Play();
+            Score.score += 25;
+                        
+            p1Animator.SetBool("Correct", true);
+            prisonCell1Animator.SetBool("Correct", true);  
+            rightanswer = true;
+            rightanswer = false;
         }
 
-
-    }
+    
     void Update()
     {
         //Updates score UI
