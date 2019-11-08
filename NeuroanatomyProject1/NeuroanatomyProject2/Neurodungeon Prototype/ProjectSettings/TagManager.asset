@@ -9,6 +9,7 @@ TagManager:
   - notInteractable
   - Fog
   - Water
+  - Marking
   layers:
   - Default
   - TransparentFX

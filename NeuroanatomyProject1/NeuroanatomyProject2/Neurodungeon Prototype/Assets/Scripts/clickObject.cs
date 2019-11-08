@@ -6,6 +6,8 @@ public class clickObject : MonoBehaviour
     public InGameUI UI;
     public ToggleObjectCanvas canvasToggle;
     public GameObject clickedObject;
+    public RemoveMarking markingCanvasScript;
+    
 
 
     void Update () 
@@ -24,13 +26,12 @@ public class clickObject : MonoBehaviour
                     canvasToggle = rig.GetComponent<ToggleObjectCanvas>();
                     Debug.Log(rig.name);
                     canvasToggle.ToggleCanvas();
+
+                    markingCanvasScript = rig.GetComponentInChildren<RemoveMarking>();
+                    markingCanvasScript.DestroyMarking();
+
                 }
-                else
-                {
-                    {
-                        Debug.Log(rig.name);
-                    }
-                }
+                
             }
         }
 

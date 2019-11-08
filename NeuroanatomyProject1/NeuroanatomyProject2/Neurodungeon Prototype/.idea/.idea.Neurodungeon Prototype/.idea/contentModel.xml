@@ -56,11 +56,13 @@
           <e p="FootstepAudioScript.cs" t="Include" />
           <e p="InGameUI.cs" t="Include" />
           <e p="Key.cs" t="Include" />
+          <e p="LightVariation.cs" t="Include" />
           <e p="MenuScript.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PrisonerAudio.cs" t="Include" />
           <e p="PrisonerSaved.cs" t="Include" />
           <e p="QuestionIndexer.cs" t="Include" />
+          <e p="RemoveMarking.cs" t="Include" />
           <e p="Score.cs" t="Include" />
           <e p="ToggleObjectCanvas.cs" t="Include" />
           <e p="TorchAudioScript.cs" t="Include" />
