@@ -30,6 +30,8 @@ public class clickObject : MonoBehaviour
                     markingCanvasScript = rig.GetComponentInChildren<RemoveMarking>();
                     markingCanvasScript.DestroyMarking();
 
+                    
+                    UI.currentAnimator = rig.GetComponent<Animator>();
                 }
                 
             }

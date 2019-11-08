@@ -20,12 +20,15 @@ public class InGameUI : MonoBehaviour
     public GameObject question1;
     public GameObject question2;
     public GameObject clue1;
+
     //Animators
     public Animator p1Animator;
     public Animator prisonCell1Animator;
     public Animator cameraanim;
     public Animator black;
     public Animator door;
+
+    public Animator currentAnimator;
     //Audiosources
     AudioSource myAudio;
     public AudioSource answersAudio;
@@ -168,7 +171,7 @@ public class InGameUI : MonoBehaviour
         StartCoroutine("BackToMenu");
     }
 
-    public void OnRightAnswer()
+    /*public void OnRightAnswer()
     {
         //This handles the "right answer" effect 
         if (rightanswer == false)
@@ -184,9 +187,9 @@ public class InGameUI : MonoBehaviour
             rightanswer = false;
 
         }
-    }
+    }*/
 
-    public void OnPrisonRightAnswer()
+    /*public void OnPrisonRightAnswer()
         {
             answersAudio.volume = 0.05f;
             answersAudio.clip = rightAnswer;
@@ -197,7 +200,18 @@ public class InGameUI : MonoBehaviour
             prisonCell1Animator.SetBool("Correct", true);  
             rightanswer = true;
             rightanswer = false;
-        }
+        }*/
+    
+    public void OnRightAnswer()
+    {
+        answersAudio.volume = 0.05f;
+        answersAudio.clip = rightAnswer;
+        answersAudio.Play();
+        Score.score += 25;
+        currentAnimator.SetBool("Correct", true);
+        rightanswer = true;
+        rightanswer = false;
+    }
 
     
     void Update()
