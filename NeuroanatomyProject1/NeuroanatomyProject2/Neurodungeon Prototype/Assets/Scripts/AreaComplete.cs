@@ -10,8 +10,8 @@ public class AreaComplete : MonoBehaviour
     public AudioClip scoreSound;
 
     public List<GameObject> fogs = new List<GameObject>();
-
     public GameObject completeText;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Fog")

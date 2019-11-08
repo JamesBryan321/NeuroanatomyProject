@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ToggleObjectCanvas : MonoBehaviour
 {
@@ -10,12 +8,6 @@ public class ToggleObjectCanvas : MonoBehaviour
     {
         _infoCanvas = GetComponentInChildren<Canvas>();
         _infoCanvas.enabled = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void ToggleCanvas()

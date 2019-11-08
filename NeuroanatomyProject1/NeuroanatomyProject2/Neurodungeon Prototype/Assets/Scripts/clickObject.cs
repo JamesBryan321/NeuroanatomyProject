@@ -17,8 +17,8 @@ public class clickObject : MonoBehaviour
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
-            //int layer_mask = LayerMask.GetMask("Interactable"); this variable shouldn't be necessary?
-            if (Physics.Raycast(ray, out hitInfo, 1000/*, layer_mask*/))
+            int layer_mask = LayerMask.GetMask("Interactable");
+            if (Physics.Raycast(ray, out hitInfo, 1000, layer_mask))
             {
                 var rig = hitInfo.collider;
                 if(rig.CompareTag("Interactable"))

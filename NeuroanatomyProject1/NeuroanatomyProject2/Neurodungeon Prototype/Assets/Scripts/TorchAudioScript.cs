@@ -17,8 +17,6 @@ public class TorchAudioScript : MonoBehaviour
 
     }
 
-
-
     private void OnTriggerEnter(Collider other)
     {
 
