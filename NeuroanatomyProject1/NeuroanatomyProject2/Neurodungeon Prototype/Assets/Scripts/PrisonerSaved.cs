@@ -3,8 +3,17 @@
 public class PrisonerSaved : MonoBehaviour
 {
     public Transform waypoint;
+
+    public GameObject mainRoomAudio;
+    AudioSource myAudio;
     
     private Animator prisonerAnimator;
+
+    private void Start()
+    {
+        mainRoomAudio.SetActive(false);
+        myAudio = GetComponent<AudioSource>();
+    }
 
     public void Dance()
     {
@@ -18,6 +27,8 @@ public class PrisonerSaved : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             transform.position = waypoint.position;
+            mainRoomAudio.SetActive(true);
+            myAudio.enabled = false;
         }
     }
 }

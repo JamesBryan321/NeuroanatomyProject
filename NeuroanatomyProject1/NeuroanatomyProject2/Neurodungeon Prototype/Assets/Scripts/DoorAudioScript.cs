@@ -5,6 +5,7 @@ public class DoorAudioScript : MonoBehaviour
 
     public AudioClip Unlocking;
     public AudioClip Opening;
+    public AudioClip debrisSmashing;
 
     AudioSource myAudio;
 
@@ -27,6 +28,14 @@ public class DoorAudioScript : MonoBehaviour
     {
 
         myAudio.clip = Opening;
+        myAudio.Play();
+
+    }
+
+    void doorSmash()
+    {
+
+        myAudio.clip = debrisSmashing;
         myAudio.Play();
 
     }

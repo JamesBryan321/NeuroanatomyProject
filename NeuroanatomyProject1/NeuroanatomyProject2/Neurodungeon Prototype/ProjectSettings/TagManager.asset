@@ -10,6 +10,8 @@ TagManager:
   - Fog
   - Water
   - Marking
+  - Solid
+  - Squishy
   layers:
   - Default
   - TransparentFX

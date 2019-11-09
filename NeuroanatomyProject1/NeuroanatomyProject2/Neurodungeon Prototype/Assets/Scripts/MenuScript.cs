@@ -8,10 +8,17 @@ public class MenuScript : MonoBehaviour
     public Animator anim;
     public GameObject UI;
 
+    bool enteringScene;
+
+    public AudioSource camAudio;
+    public AudioSource buttonAudio;
+
     void Start()
     {
         //Starts a coroutine which turns on UI after the menu opening animation
         StartCoroutine("OnMenuStart");
+
+        enteringScene = false;
     }
 
     IEnumerator OnMenuStart ()
@@ -23,6 +30,10 @@ public class MenuScript : MonoBehaviour
     {
         //Starts scene transition
         StartCoroutine("SceneChange");
+
+        buttonAudio.Play();
+        enteringScene = true;
+
     }
 
     void Update()
@@ -30,6 +41,14 @@ public class MenuScript : MonoBehaviour
         //Forces camera to look and rotate around the brain
             transform.LookAt(target);
             transform.Translate(Vector3.right * rotatespeed * Time.deltaTime);
+
+        if (enteringScene == true)
+        {
+
+            camAudio.volume -= 0.001f;
+
+        }
+
     }
 
     IEnumerator SceneChange ()

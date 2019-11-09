@@ -7,8 +7,9 @@ public class clickObject : MonoBehaviour
     public ToggleObjectCanvas canvasToggle;
     public GameObject clickedObject;
     public RemoveMarking markingCanvasScript;
-    
 
+    public AudioSource objectAudio;
+    public AudioClip journalOpening;
 
     void Update () 
     {
@@ -26,6 +27,9 @@ public class clickObject : MonoBehaviour
                     canvasToggle = rig.GetComponent<ToggleObjectCanvas>();
                     Debug.Log(rig.name);
                     canvasToggle.ToggleCanvas();
+
+                    objectAudio.clip = journalOpening;
+                    objectAudio.Play();
 
                     markingCanvasScript = rig.GetComponentInChildren<RemoveMarking>();
                     markingCanvasScript.DestroyMarking();
