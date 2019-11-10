@@ -9,11 +9,17 @@ public class AudioHittingLooseObjects : MonoBehaviour
 
     public AudioClip hardAudio;
     public AudioClip squishyAudio;
+    public AudioClip glassAudio;
+    public AudioClip woodAudio;
+    public AudioClip metalAudio;
+
+    bool touchedObject;
 
     // Start is called before the first frame update
     void Start()
     {
 
+        touchedObject = false;
         myAudio = GetComponent<AudioSource>();
 
     }
@@ -28,7 +34,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         
-        if(collision.gameObject.tag == "Solid")
+        if(collision.gameObject.tag == "Solid" && touchedObject == false)
         {
 
             myAudio.clip = hardAudio;
@@ -36,9 +42,12 @@ public class AudioHittingLooseObjects : MonoBehaviour
             myAudio.pitch = Random.Range(0.9f, 1f);
             myAudio.Play();
 
+            touchedObject = true;
+            Invoke("touchedObjectTrue", 0.5f);
+
         }
 
-        if (collision.gameObject.tag == "Squishy")
+        if (collision.gameObject.tag == "Squishy" && touchedObject == false)
         {
 
             myAudio.clip = squishyAudio;
@@ -46,7 +55,43 @@ public class AudioHittingLooseObjects : MonoBehaviour
             myAudio.pitch = Random.Range(0.9f, 1f);
             myAudio.Play();
 
+            touchedObject = true;
+            Invoke("touchedObjectTrue", 0.5f);
+
         }
+
+        if (collision.gameObject.tag == "Glass" && touchedObject == false)
+        {
+
+            myAudio.clip = glassAudio;
+            myAudio.volume = Random.Range(0.02f, 0.06f);
+            myAudio.pitch = Random.Range(0.95f, 1f);
+            myAudio.Play();
+
+            touchedObject = true;
+            Invoke("touchedObjectTrue", 0.5f);
+
+        }
+
+        if (collision.gameObject.tag == "Metal" && touchedObject == false)
+        {
+
+            myAudio.clip = metalAudio;
+            myAudio.volume = Random.Range(0.12f, 0.18f);
+            myAudio.pitch = Random.Range(0.95f, 1f);
+            myAudio.Play();
+
+            touchedObject = true;
+            Invoke("touchedObjectTrue", 0.5f);
+
+        }
+
+    }
+
+    void touchedObjectTrue()
+    {
+
+        touchedObject = false;
 
     }
 

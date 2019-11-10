@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmashingObjectsAudioScript : MonoBehaviour
+public class AudioScriptForRollingObjects : MonoBehaviour
 {
 
     AudioSource myAudio;
@@ -13,16 +13,25 @@ public class SmashingObjectsAudioScript : MonoBehaviour
 
         myAudio = GetComponent<AudioSource>();
 
-        myAudio.volume = Random.Range(0.04f, 0.11f);
-        myAudio.pitch = Random.Range(0.85f, 0.95f);
-        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
 
+    void OnTriggerEnter(Collider other)
+    {
+        
+        if(other.tag == "Ground")
+        {
+
+            myAudio.volume = Random.Range(0.01f, 0.03f);
+            myAudio.Play();
+
+        }
 
     }
+
 }

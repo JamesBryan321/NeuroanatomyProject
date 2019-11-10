@@ -12,6 +12,10 @@ TagManager:
   - Marking
   - Solid
   - Squishy
+  - Ground
+  - Glass
+  - Metal
+  - Wood
   layers:
   - Default
   - TransparentFX
