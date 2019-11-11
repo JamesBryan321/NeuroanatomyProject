@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7425698210281827765}
   - component: {fileID: 7425698210281827762}
   - component: {fileID: 7425698210281827761}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bed_Ruined
   m_TagString: Interactable
   m_Icon: {fileID: 0}

@@ -1534,6 +1534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Unlocking: {fileID: 8300000, guid: 6f72f855b38dd294894c6ac011883e43, type: 3}
   Opening: {fileID: 8300000, guid: 635307b3c0beea142baddcdc28279748, type: 3}
+  debrisSmashing: {fileID: 0}
 --- !u!1 &8171486929066747836
 GameObject:
   m_ObjectHideFlags: 0

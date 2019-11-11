@@ -226,6 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Unlocking: {fileID: 8300000, guid: e700803c9a33d644489e890c23df7cf0, type: 3}
   Opening: {fileID: 8300000, guid: 635307b3c0beea142baddcdc28279748, type: 3}
+  debrisSmashing: {fileID: 0}
 --- !u!114 &1828051462570434033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,7 +253,7 @@ GameObject:
   - component: {fileID: 8233618076906139689}
   - component: {fileID: 1828051463403023840}
   - component: {fileID: 1828051463403023841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Prison_Wall_Door (1)
   m_TagString: Interactable
   m_Icon: {fileID: 0}

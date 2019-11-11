@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1275005822596423174}
   - component: {fileID: 8839580977299172901}
   - component: {fileID: 8839580977299172900}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spin_Blade_Trap
   m_TagString: Interactable
   m_Icon: {fileID: 0}

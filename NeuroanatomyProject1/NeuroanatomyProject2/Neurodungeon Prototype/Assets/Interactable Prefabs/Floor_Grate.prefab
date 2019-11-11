@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 663317619310197811}
   - component: {fileID: 7073370260522362871}
   - component: {fileID: 7073370260522362870}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor_Grate
   m_TagString: Interactable
   m_Icon: {fileID: 0}

@@ -96,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/JournalPopUpTrigger.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -174,7 +174,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ToggleObjectCanvas.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -327,12 +327,12 @@
       <workItem from="1572570588089" duration="2184000" />
       <workItem from="1573098842842" duration="3564000" />
       <workItem from="1573196528205" duration="10639000" />
-      <workItem from="1573428370700" duration="10861000" />
+      <workItem from="1573428370700" duration="11461000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40599000" />
+    <option name="totallyTimeSpent" value="41199000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -345,7 +345,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="414" y="65" width="1145" height="930" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10506912" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -430,20 +429,6 @@
             <marker date="1573427674400" expanded="true" signature="352:491" ph="{...}" />
             <marker date="1573427674400" expanded="true" signature="544:759" ph="{...}" />
             <marker date="1573427674400" expanded="true" signature="601:753" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ToggleObjectCanvas.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <marker date="1573427674405" expanded="true" signature="67:500" ph="{...}" />
-            <marker date="1573427674405" expanded="true" signature="131:236" ph="{...}" />
-            <marker date="1573427674405" expanded="true" signature="268:498" ph="{...}" />
-            <marker date="1573427674405" expanded="true" signature="316:376" ph="{...}" />
-            <marker date="1573427674405" expanded="true" signature="431:492" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -607,6 +592,20 @@
             <marker date="1573440210311" expanded="true" signature="128:375" ph="{...}" />
             <marker date="1573440210311" expanded="true" signature="210:373" ph="{...}" />
             <marker date="1573440210311" expanded="true" signature="265:367" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ToggleObjectCanvas.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <marker date="1573427674405" expanded="true" signature="67:500" ph="{...}" />
+            <marker date="1573427674405" expanded="true" signature="131:236" ph="{...}" />
+            <marker date="1573427674405" expanded="true" signature="268:498" ph="{...}" />
+            <marker date="1573427674405" expanded="true" signature="316:376" ph="{...}" />
+            <marker date="1573427674405" expanded="true" signature="431:492" ph="{...}" />
           </folding>
         </state>
       </provider>

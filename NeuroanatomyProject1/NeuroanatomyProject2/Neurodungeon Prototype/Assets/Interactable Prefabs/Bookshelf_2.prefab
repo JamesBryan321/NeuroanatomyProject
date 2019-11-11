@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7575198278593113209}
   - component: {fileID: 161489301237186601}
   - component: {fileID: 161489301237186600}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bookshelf_2
   m_TagString: Interactable
   m_Icon: {fileID: 0}

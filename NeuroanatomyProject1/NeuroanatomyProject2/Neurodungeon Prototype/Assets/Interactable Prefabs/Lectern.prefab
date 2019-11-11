@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 4858066870609151644}
   - component: {fileID: 2915633320662826013}
   - component: {fileID: 2915633320662826012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lectern
   m_TagString: Interactable
   m_Icon: {fileID: 0}

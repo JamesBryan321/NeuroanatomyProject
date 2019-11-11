@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 3105723861567932395}
   - component: {fileID: 65592924218852470}
   - component: {fileID: 65592924218852469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Golden_Chest
   m_TagString: Interactable
   m_Icon: {fileID: 0}
