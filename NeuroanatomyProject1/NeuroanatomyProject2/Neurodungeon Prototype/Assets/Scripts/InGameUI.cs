@@ -21,6 +21,9 @@ public class InGameUI : MonoBehaviour
     public GameObject question2;
     public GameObject clue1;
 
+    public Canvas v1Index;
+    public Canvas v2Index;
+
     //Animators
     public Animator p1Animator;
     public Animator prisonCell1Animator;
@@ -70,6 +73,8 @@ public class InGameUI : MonoBehaviour
             else if (ingamemenu.activeSelf == true)
             {
                 ingamemenu.SetActive (false);
+                v1Index.enabled = false;
+                v2Index.enabled = false;
                 clue1.SetActive(false);
                 journalClosingSound();
                 ambienceVolumeHigher();
@@ -229,6 +234,7 @@ public class InGameUI : MonoBehaviour
         if (ingamemenu.activeSelf == true)
         {
             ingamemenu.SetActive(false);
+            
         }
         yield return new WaitForSeconds(3f);
         cameraanim.SetBool("onback", false);
@@ -243,6 +249,8 @@ public class InGameUI : MonoBehaviour
         if (MenuButton.activeSelf == false)
         {
             MenuButton.SetActive(true);
+            v1Index.enabled = false;
+            v2Index.enabled = false;
             pageTurningSound();
             MapButton.SetActive(false);
         }
@@ -254,8 +262,36 @@ public class InGameUI : MonoBehaviour
         if (MapButton.activeSelf == false)
         {
             MenuButton.SetActive(false);
+            v1Index.enabled = false;
+            v2Index.enabled = false;
             pageTurningSound();
             MapButton.SetActive(true);
+        }
+    }
+    
+    public void OnIndexButton1()
+    {
+        //Handles the "map" section on in game ui
+        if (v1Index.enabled == false)
+        {
+            MenuButton.SetActive(false);
+            MapButton.SetActive(false);
+            v2Index.enabled = false;
+            pageTurningSound();
+            v1Index.enabled = true;
+        }
+    }
+    
+    public void OnIndexButton2()
+    {
+        //Handles the "map" section on in game ui
+        if (v2Index.enabled == false)
+        {
+            MenuButton.SetActive(false);
+            MapButton.SetActive(false);
+            v1Index.enabled = false;
+            pageTurningSound();
+            v2Index.enabled = true;
         }
     }
 

@@ -7,7 +7,7 @@ public class clickObject : MonoBehaviour
     public ToggleObjectCanvas canvasToggle;
     public GameObject clickedObject;
     public RemoveMarking markingCanvasScript;
-
+    public PopUpController pUController;
     public AudioSource objectAudio;
     public AudioClip journalOpening;
 
@@ -30,14 +30,17 @@ public class clickObject : MonoBehaviour
 
                     objectAudio.clip = journalOpening;
                     objectAudio.Play();
+                    
+                    UI.currentAnimator = rig.GetComponent<Animator>();
 
                     markingCanvasScript = rig.GetComponentInChildren<RemoveMarking>();
                     markingCanvasScript.DestroyMarking();
-
-                    
-                    UI.currentAnimator = rig.GetComponent<Animator>();
                 }
-                
+
+                if (pUController.interactableHintInteger == 1)
+                {
+                    pUController.CloseInteractableHint();
+                }
             }
         }
 

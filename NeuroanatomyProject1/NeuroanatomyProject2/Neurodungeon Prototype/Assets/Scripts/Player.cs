@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public Rigidbody rb;
 
     public GameObject rotatable;
+
+    public PopUpController pUController;
     
     void Start()
     {
@@ -30,6 +32,12 @@ public class Player : MonoBehaviour
         if (rb.velocity.magnitude > 0)
         {
             m_animator.SetBool("run", true);
+            
+            if (pUController.moveHintInteger == 1)
+            {
+                pUController.CloseMoveHint();
+            }
+            
         }
 
         //Sets up physics

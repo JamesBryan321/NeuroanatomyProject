@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 6251387061195861133}
   - component: {fileID: 6251387061195861134}
   - component: {fileID: -5030442300665018878}
+  - component: {fileID: 977645827}
   m_Layer: 5
   m_Name: InfoCanvas
   m_TagString: Untagged
@@ -280,6 +281,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec1f640341b46d7438999c8731df823f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectAudio: {fileID: 6251387061195861134}
+  journalClosing: {fileID: 8300000, guid: 02a562a65bc471844851704a8b007f36, type: 3}
+--- !u!114 &977645827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6251387061195861232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de87e82ec1bfd904abe1ac04b168bb6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6251387061330814441
