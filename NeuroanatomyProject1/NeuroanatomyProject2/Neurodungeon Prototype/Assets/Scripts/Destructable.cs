@@ -8,6 +8,7 @@ public class Destructable : MonoBehaviour
     private void OnMouseDown()
     {
         Instantiate(Destroyedversion, transform.position, transform.rotation);
+        Score.score += 5;
         Destroy(gameObject);
     }
 }

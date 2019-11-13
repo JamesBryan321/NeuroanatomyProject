@@ -30,8 +30,6 @@ public class AreaComplete : MonoBehaviour
             playScoreSound();
 
             StartCoroutine("TextUI");
-
-            Destroy(this);
         }
     }
 
@@ -49,6 +47,8 @@ public class AreaComplete : MonoBehaviour
         completeText.SetActive(true);
         yield return new WaitForSeconds(2f);
         completeText.SetActive(false);
+
+        Destroy(this);
     }
 
 }

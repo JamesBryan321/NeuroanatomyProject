@@ -10,9 +10,12 @@ public class clickObject : MonoBehaviour
     public PopUpController pUController;
     public AudioSource objectAudio;
     public AudioClip journalOpening;
+    public static bool canInteract = true;
 
     void Update () 
     {
+        print(canInteract);
+        if (canInteract == true) { 
         //Checks if player clicks on interactable objects
         if (Input.GetMouseButtonDown(0))
         {
@@ -43,6 +46,6 @@ public class clickObject : MonoBehaviour
                 }
             }
         }
-
+       }
     }
 }
