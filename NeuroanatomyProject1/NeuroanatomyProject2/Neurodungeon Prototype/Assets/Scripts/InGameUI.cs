@@ -66,7 +66,6 @@ public class InGameUI : MonoBehaviour
        
             if (ingamemenu.activeSelf == false)
             {
-                clickObject.canInteract = false;
                 ingamemenu.SetActive (true);
                 OnMapButton();
                 journalOpeningSound();
@@ -74,7 +73,6 @@ public class InGameUI : MonoBehaviour
         }
             else if (ingamemenu.activeSelf == true)
             {
-                clickObject.canInteract = true;
                 ingamemenu.SetActive (false);
                 v1Index.enabled = false;
                 v2Index.enabled = false;
@@ -91,7 +89,6 @@ public class InGameUI : MonoBehaviour
         {
             if (question1.activeSelf == false)
             {
-                clickObject.canInteract = false;
                 question1.SetActive(true);
                 journalOpeningSound();
                 ambienceVolumeLower();
@@ -102,7 +99,6 @@ public class InGameUI : MonoBehaviour
                 GameObject.Find("Door1").tag = "notInteractable";
                 journalClosingSound();
                 ambienceVolumeHigher();
-                clickObject.canInteract = true;
             }
          
         }
@@ -111,7 +107,6 @@ public class InGameUI : MonoBehaviour
         {
             if (question2.activeSelf == false)
             {
-                clickObject.canInteract = false;
                 question2.SetActive(true);
                 journalOpeningSound();
                 ambienceVolumeLower();
@@ -124,7 +119,6 @@ public class InGameUI : MonoBehaviour
                 p1Animator.SetBool("Correct", true);
                 prisonCell1Animator.SetBool("Correct", true);            
                 ambienceVolumeHigher();
-                clickObject.canInteract = true;
             }
         }
 
@@ -132,7 +126,6 @@ public class InGameUI : MonoBehaviour
         {
             if (clue1.activeSelf == false)
             {
-                clickObject.canInteract = false;
                 clue1.SetActive(true);
                 journalOpeningSound();
                 ambienceVolumeLower();
@@ -142,7 +135,6 @@ public class InGameUI : MonoBehaviour
                 clue1.SetActive(false);
                 journalClosingSound();
                 ambienceVolumeHigher();
-                clickObject.canInteract = true;
             }
         }
     }
@@ -155,7 +147,6 @@ public class InGameUI : MonoBehaviour
                 question1.SetActive(false);
                 journalClosingSound();
                 ambienceVolumeHigher();
-                clickObject.canInteract = true;
         }
 
         if (questionIndex == 2)
@@ -164,7 +155,6 @@ public class InGameUI : MonoBehaviour
                 question2.SetActive(false);
                 journalClosingSound();
                 ambienceVolumeHigher();
-                clickObject.canInteract = true;
         }
 
         if (questionIndex == 3)
@@ -172,7 +162,6 @@ public class InGameUI : MonoBehaviour
                 clue1.SetActive(false);
                 journalClosingSound();
                 ambienceVolumeHigher();
-                clickObject.canInteract = true;
         }
     }
     IEnumerator OnGameStart()

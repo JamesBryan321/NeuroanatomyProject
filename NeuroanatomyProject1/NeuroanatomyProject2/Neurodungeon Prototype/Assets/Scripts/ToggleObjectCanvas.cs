@@ -15,11 +15,13 @@ public class ToggleObjectCanvas : MonoBehaviour
         if (_infoCanvas.enabled == false)
         {
             _infoCanvas.enabled = true;
+            clickObject.canInteract = false;
         }
         
         else if (_infoCanvas.enabled == true)
         {
             _infoCanvas.enabled = false;
+            clickObject.canInteract = true;
         }
     }
 }

@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2002782517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2002782518}
+  m_Layer: 0
+  m_Name: WaypointTeleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2002782518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002782517}
+  m_LocalRotation: {x: -0, y: 0.9762377, z: -0, w: 0.21670243}
+  m_LocalPosition: {x: -398.7665, y: -0.39086092, z: 353.8659}
+  m_LocalScale: {x: 3.4666433, y: 3.4666433, z: 3.4666433}
+  m_Children: []
+  m_Father: {fileID: 6516549582296856290}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &36467600664561947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,6 +1211,7 @@ Transform:
   m_Children:
   - {fileID: 3989380445258733263}
   - {fileID: 5521258389424054619}
+  - {fileID: 2002782518}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -154.96901, z: 0}
@@ -1228,7 +1259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f986f6cf503db104993ca007c72d84c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoint: {fileID: 0}
+  waypoint: {fileID: 2002782518}
   mainRoomAudio: {fileID: 0}
 --- !u!82 &7796916818157815029
 AudioSource:
