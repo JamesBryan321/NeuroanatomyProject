@@ -14,7 +14,7 @@ public class clickObject : MonoBehaviour
 
     void Update () 
     {
-        print(canInteract);
+        //print(canInteract);
         if (canInteract == true) { 
         //Checks if player clicks on interactable objects
         if (Input.GetMouseButtonDown(0))

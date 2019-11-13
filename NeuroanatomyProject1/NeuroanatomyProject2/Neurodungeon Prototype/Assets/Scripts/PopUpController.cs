@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PopUpController : MonoBehaviour
 {
     public GameObject[] popUps;
-    public int moveHintInteger;
+    public int moveHintInteger = 1;
     public int interactableHintInteger;
     public int journalHintInteger;
     
@@ -17,6 +17,7 @@ public class PopUpController : MonoBehaviour
         {
             popUps[i].SetActive(false);
         }
+        OpenMoveHint();
     }
 
     public void OpenMoveHint()

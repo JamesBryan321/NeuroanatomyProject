@@ -69,6 +69,7 @@
           <e p="PrisonerAudio.cs" t="Include" />
           <e p="PrisonerSaved.cs" t="Include" />
           <e p="QuestionIndexer.cs" t="Include" />
+          <e p="questionManager.cs" t="Include" />
           <e p="RemoveMarking.cs" t="Include" />
           <e p="Score.cs" t="Include" />
           <e p="SmashingObjectsAudioScript.cs" t="Include" />

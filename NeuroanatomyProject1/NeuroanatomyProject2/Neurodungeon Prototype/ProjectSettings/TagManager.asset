@@ -16,6 +16,10 @@ TagManager:
   - Glass
   - Metal
   - Wood
+  - Wrong 1
+  - Wrong 3
+  - Wrong 2
+  - Correct
   layers:
   - Default
   - TransparentFX
