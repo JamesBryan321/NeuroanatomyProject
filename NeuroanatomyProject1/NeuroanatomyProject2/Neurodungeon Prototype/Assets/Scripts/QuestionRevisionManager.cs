@@ -5,7 +5,11 @@ using UnityEngine.UI;
 public class QuestionRevisionManager : MonoBehaviour
 {
     public GameObject[] questionsarray;
-
+    public GameObject question1;
+    public GameObject question2;
+    public GameObject question3;
+    public GameObject question4;
+    public GameObject ingameUI;
     private void Start()
     {
         
@@ -29,5 +33,26 @@ public class QuestionRevisionManager : MonoBehaviour
             }
         }
 
+    }
+
+    public void Question1 ()
+    {
+        ingameUI.SetActive(false);
+        question1.GetComponent<Canvas>().enabled = true;
+    }
+    public void Question2()
+    {
+        ingameUI.SetActive(false);
+        question2.GetComponent<Canvas>().enabled = true;
+    }
+    public void Question3()
+    {
+        ingameUI.SetActive(false);
+        question3.GetComponent<Canvas>().enabled = true;
+    }
+    public void Question4()
+    {
+        ingameUI.SetActive(false);
+        question4.GetComponent<Canvas>().enabled = true;
     }
 }
