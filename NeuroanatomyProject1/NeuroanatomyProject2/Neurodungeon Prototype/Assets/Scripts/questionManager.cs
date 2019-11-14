@@ -11,6 +11,7 @@ public class questionManager : MonoBehaviour
     
     void Start()
     {
+
         wrongAnswer1Canvas.enabled = false;
         wrongAnswer2Canvas.enabled = false;
         wrongAnswer3Canvas.enabled = false;

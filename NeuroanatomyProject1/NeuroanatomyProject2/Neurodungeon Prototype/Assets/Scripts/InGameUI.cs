@@ -21,6 +21,7 @@ public class InGameUI : MonoBehaviour
     public GameObject question2;
     public GameObject clue1;
     public GameObject WikiButton;
+    public GameObject RevisionButton;
 
     public Canvas v1Index;
     public Canvas v2Index;
@@ -66,6 +67,7 @@ public class InGameUI : MonoBehaviour
        
             if (ingamemenu.activeSelf == false)
             {
+                clickObject.canInteract = false;
                 ingamemenu.SetActive (true);
                 OnMapButton();
                 journalOpeningSound();
@@ -79,6 +81,7 @@ public class InGameUI : MonoBehaviour
                 clue1.SetActive(false);
                 journalClosingSound();
                 ambienceVolumeHigher();
+                clickObject.canInteract = true;
         }
     }
 
@@ -249,6 +252,7 @@ public class InGameUI : MonoBehaviour
         //Handles the "menu" section on in game ui
         if (MenuButton.activeSelf == false)
         {
+            RevisionButton.SetActive(false);
             MenuButton.SetActive(true);
             WikiButton.SetActive(false);
             v1Index.enabled = false;
@@ -263,6 +267,7 @@ public class InGameUI : MonoBehaviour
         //Handles the "map" section on in game ui
         if (MapButton.activeSelf == false)
         {
+            RevisionButton.SetActive(false);
             MenuButton.SetActive(false);
             WikiButton.SetActive(false);
             v1Index.enabled = false;
@@ -275,8 +280,10 @@ public class InGameUI : MonoBehaviour
     public void OnWikiButton()
     {
         //Handles the "wiki" section on in game ui
-        if (MapButton.activeSelf == false)
+        if (WikiButton.activeSelf == false)
         {
+            MapButton.SetActive(false);
+            RevisionButton.SetActive(false);
             WikiButton.SetActive(true);
             MenuButton.SetActive(false);
             v1Index.enabled = false;
@@ -286,11 +293,23 @@ public class InGameUI : MonoBehaviour
         }
     }
 
+    public void OnRevision ()
+    {
+        RevisionButton.SetActive(true);
+        WikiButton.SetActive(false);
+        MenuButton.SetActive(false);
+        v1Index.enabled = false;
+        v2Index.enabled = false;
+        pageTurningSound();
+        WikiButton.SetActive(false);
+    }
+
     public void OnIndexButton1()
     {
         //Handles the "map" section on in game ui
         if (v1Index.enabled == false)
         {
+            RevisionButton.SetActive(false);
             WikiButton.SetActive(false);
             MenuButton.SetActive(false);
             MapButton.SetActive(false);
@@ -305,6 +324,7 @@ public class InGameUI : MonoBehaviour
         //Handles the "map" section on in game ui
         if (v2Index.enabled == false)
         {
+            RevisionButton.SetActive(false);
             WikiButton.SetActive(false);
             MenuButton.SetActive(false);
             MapButton.SetActive(false);
