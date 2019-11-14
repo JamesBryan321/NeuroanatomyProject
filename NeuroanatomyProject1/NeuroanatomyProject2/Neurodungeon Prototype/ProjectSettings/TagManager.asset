@@ -20,6 +20,7 @@ TagManager:
   - Wrong 3
   - Wrong 2
   - Correct
+  - Wall
   layers:
   - Default
   - TransparentFX

@@ -9,9 +9,13 @@ public class AudioHittingLooseObjects : MonoBehaviour
 
     public AudioClip hardAudio;
     public AudioClip squishyAudio;
-    public AudioClip glassAudio;
     public AudioClip woodAudio;
     public AudioClip metalAudio;
+    public AudioClip wallAudio;
+    public AudioClip[] glassAudio;
+    private AudioClip glassSoundEffect;
+
+    public int glassInt;
 
     bool touchedObject;
 
@@ -19,6 +23,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
     void Start()
     {
 
+        glassInt = 0;
         touchedObject = false;
         myAudio = GetComponent<AudioSource>();
 
@@ -63,8 +68,22 @@ public class AudioHittingLooseObjects : MonoBehaviour
         if (collision.gameObject.tag == "Glass" && touchedObject == false)
         {
 
-            myAudio.clip = glassAudio;
-            myAudio.volume = Random.Range(0.02f, 0.06f);
+            int glassIndex = Random.Range(0, glassAudio.Length);
+            glassSoundEffect = glassAudio[glassIndex];
+            myAudio.clip = glassSoundEffect;
+            myAudio.Play();
+
+            touchedObject = true;
+            Invoke("touchedObjectTrue", 0.5f);
+
+
+        }
+
+        if (collision.gameObject.tag == "Metal" && touchedObject == false)
+        {
+
+            myAudio.clip = metalAudio;
+            myAudio.volume = Random.Range(0.12f, 0.18f);
             myAudio.pitch = Random.Range(0.95f, 1f);
             myAudio.Play();
 
@@ -73,10 +92,23 @@ public class AudioHittingLooseObjects : MonoBehaviour
 
         }
 
-        if (collision.gameObject.tag == "Metal" && touchedObject == false)
+        if (collision.gameObject.tag == "Wood" && touchedObject == false)
         {
 
-            myAudio.clip = metalAudio;
+            myAudio.clip = woodAudio;
+            myAudio.volume = Random.Range(0.12f, 0.18f);
+            myAudio.pitch = Random.Range(0.95f, 1f);
+            myAudio.Play();
+
+            touchedObject = true;
+            Invoke("touchedObjectTrue", 0.5f);
+
+        }
+
+        if (collision.gameObject.tag == "Wall" && touchedObject == false)
+        {
+
+            myAudio.clip = wallAudio;
             myAudio.volume = Random.Range(0.12f, 0.18f);
             myAudio.pitch = Random.Range(0.95f, 1f);
             myAudio.Play();
