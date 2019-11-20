@@ -21,6 +21,7 @@ TagManager:
   - Wrong 2
   - Correct
   - Wall
+  - Tutorial
   layers:
   - Default
   - TransparentFX

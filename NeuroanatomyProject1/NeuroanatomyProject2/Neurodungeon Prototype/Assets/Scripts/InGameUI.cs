@@ -3,6 +3,7 @@ using TMPro;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections.Generic;
 public class InGameUI : MonoBehaviour
 {
     //Audioclips
@@ -43,12 +44,16 @@ public class InGameUI : MonoBehaviour
     //Texts
     public TextMeshProUGUI scoretext;
     //Booleans
-    bool rightanswer = false;
    
     //Floats 
     public float audioVolume;
 
+    GameObject[] activetutorials;
+
     public SceneAudioVolumeScript scriptA;
+
+    public PopUpController popups;
+    public List<GameObject> activepopups = new List<GameObject>();
 
     public void Start()
     {
@@ -69,6 +74,7 @@ public class InGameUI : MonoBehaviour
         joystickOuter.enabled = true;
         joystickInner.enabled = true;
         joystickInvisible.enabled = false;
+        
 
     }
     
@@ -78,6 +84,14 @@ public class InGameUI : MonoBehaviour
        
             if (ingamemenu.activeSelf == false)
             {
+            for (int i = 0; i < popups.popUps.Length; i++)
+            {
+                if (popups.popUps [i].activeSelf == true)
+                {
+                    activepopups.Add(popups.popUps[i]);
+                    popups.popUps[i].SetActive (false);
+                }
+            }
                 clickObject.canInteract = false;
                 ingamemenu.SetActive (true);
                 OnMapButton();
@@ -86,6 +100,11 @@ public class InGameUI : MonoBehaviour
         }
             else if (ingamemenu.activeSelf == true)
             {
+                foreach (GameObject popup in activepopups)
+                {
+                  popup.SetActive(true);
+                }
+                activepopups.Clear();
                 ingamemenu.SetActive (false);
                 v1Index.enabled = false;
                 v2Index.enabled = false;
@@ -190,37 +209,6 @@ public class InGameUI : MonoBehaviour
         //Starts transition back to main menu
         StartCoroutine("BackToMenu");
     }
-
-    /*public void OnRightAnswer()
-    {
-        //This handles the "right answer" effect 
-        if (rightanswer == false)
-
-        {
-            answersAudio.volume = 0.05f;
-            answersAudio.clip = rightAnswer;
-            answersAudio.Play();
-            Score.score += 25;
-            door.SetBool("opendoor", true);
-            
-            rightanswer = true;
-            rightanswer = false;
-
-        }
-    }*/
-
-    /*public void OnPrisonRightAnswer()
-        {
-            answersAudio.volume = 0.05f;
-            answersAudio.clip = rightAnswer;
-            answersAudio.Play();
-            Score.score += 25;
-                        
-            p1Animator.SetBool("Correct", true);
-            prisonCell1Animator.SetBool("Correct", true);  
-            rightanswer = true;
-            rightanswer = false;
-        }*/
     
     public void OnRightAnswer()
     {
@@ -229,8 +217,6 @@ public class InGameUI : MonoBehaviour
         answersAudio.Play();
         Score.score += 25;
         currentAnimator.SetBool("Correct", true);
-        rightanswer = true;
-        rightanswer = false;
     }
 
     
