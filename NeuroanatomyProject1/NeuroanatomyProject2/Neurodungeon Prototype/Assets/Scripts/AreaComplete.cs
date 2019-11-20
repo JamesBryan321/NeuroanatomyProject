@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class AreaComplete : MonoBehaviour
 {
@@ -11,6 +13,11 @@ public class AreaComplete : MonoBehaviour
 
     public List<GameObject> fogs = new List<GameObject>();
     public GameObject completeText;
+
+    public GameObject Canvas;
+    public GameObject scorePrefab;
+
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,6 +33,7 @@ public class AreaComplete : MonoBehaviour
         if (fogs.Count == 0)
         {
             Score.score += 200;
+            
 
             playScoreSound();
 
@@ -47,6 +55,10 @@ public class AreaComplete : MonoBehaviour
         completeText.SetActive(true);
         yield return new WaitForSeconds(2f);
         completeText.SetActive(false);
+
+        GameObject Text = Instantiate(scorePrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
+        Text.transform.SetParent(Canvas.transform);
+
 
         Destroy(this);
     }

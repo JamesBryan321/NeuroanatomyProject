@@ -2,6 +2,7 @@
 using TMPro;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class InGameUI : MonoBehaviour
 {
     //Audioclips
@@ -22,6 +23,8 @@ public class InGameUI : MonoBehaviour
     public GameObject clue1;
     public GameObject WikiButton;
     public GameObject RevisionButton;
+   //Images
+    public Image joystickOuter, joystickInner, joystickInvisible;
 
     public Canvas v1Index;
     public Canvas v2Index;
@@ -37,13 +40,15 @@ public class InGameUI : MonoBehaviour
     //Audiosources
     AudioSource myAudio;
     public AudioSource answersAudio;
-    public AudioListener audioListener;
     //Texts
     public TextMeshProUGUI scoretext;
     //Booleans
     bool rightanswer = false;
+   
+    //Floats 
+    public float audioVolume;
 
-
+    public SceneAudioVolumeScript scriptA;
 
     public void Start()
     {
@@ -58,7 +63,13 @@ public class InGameUI : MonoBehaviour
         prisonCell1Animator = prisonCell1.GetComponent<Animator>();
         
         myAudio = GetComponent<AudioSource>();
+
         
+
+        joystickOuter.enabled = true;
+        joystickInner.enabled = true;
+        joystickInvisible.enabled = false;
+
     }
     
     public void OpenMenu()
@@ -70,8 +81,8 @@ public class InGameUI : MonoBehaviour
                 clickObject.canInteract = false;
                 ingamemenu.SetActive (true);
                 OnMapButton();
-                journalOpeningSound();
-                ambienceVolumeLower();
+                JournalOpeningSound();
+                AmbienceVolumeLower();
         }
             else if (ingamemenu.activeSelf == true)
             {
@@ -79,8 +90,8 @@ public class InGameUI : MonoBehaviour
                 v1Index.enabled = false;
                 v2Index.enabled = false;
                 clue1.SetActive(false);
-                journalClosingSound();
-                ambienceVolumeHigher();
+                JournalClosingSound();
+                AmbienceVolumeHigher();
                 clickObject.canInteract = true;
         }
     }
@@ -93,15 +104,15 @@ public class InGameUI : MonoBehaviour
             if (question1.activeSelf == false)
             {
                 question1.SetActive(true);
-                journalOpeningSound();
-                ambienceVolumeLower();
+                JournalOpeningSound();
+                AmbienceVolumeLower();
             }
             else if (question1.activeSelf == true)
             {              
                 question1.SetActive(false);
                 GameObject.Find("Door1").tag = "notInteractable";
-                journalClosingSound();
-                ambienceVolumeHigher();
+                JournalClosingSound();
+                AmbienceVolumeHigher();
             }
          
         }
@@ -111,17 +122,17 @@ public class InGameUI : MonoBehaviour
             if (question2.activeSelf == false)
             {
                 question2.SetActive(true);
-                journalOpeningSound();
-                ambienceVolumeLower();
+                JournalOpeningSound();
+                AmbienceVolumeLower();
             }
             else if (question2.activeSelf == true)
             {
                 question2.SetActive(false);
                 GameObject.Find("Prison_Door").tag = "notInteractable";
-                journalClosingSound();
+                JournalClosingSound();
                 p1Animator.SetBool("Correct", true);
                 prisonCell1Animator.SetBool("Correct", true);            
-                ambienceVolumeHigher();
+                AmbienceVolumeHigher();
             }
         }
 
@@ -130,14 +141,14 @@ public class InGameUI : MonoBehaviour
             if (clue1.activeSelf == false)
             {
                 clue1.SetActive(true);
-                journalOpeningSound();
-                ambienceVolumeLower();
+                JournalOpeningSound();
+                AmbienceVolumeLower();
             }
             else if (clue1.activeSelf == true)
             {
                 clue1.SetActive(false);
-                journalClosingSound();
-                ambienceVolumeHigher();
+                JournalClosingSound();
+                AmbienceVolumeHigher();
             }
         }
     }
@@ -148,23 +159,23 @@ public class InGameUI : MonoBehaviour
         if (questionIndex == 1)
         {
                 question1.SetActive(false);
-                journalClosingSound();
-                ambienceVolumeHigher();
+                JournalClosingSound();
+                AmbienceVolumeHigher();
         }
 
         if (questionIndex == 2)
         {
            
                 question2.SetActive(false);
-                journalClosingSound();
-                ambienceVolumeHigher();
+                JournalClosingSound();
+                AmbienceVolumeHigher();
         }
 
         if (questionIndex == 3)
         {
                 clue1.SetActive(false);
-                journalClosingSound();
-                ambienceVolumeHigher();
+                JournalClosingSound();
+                AmbienceVolumeHigher();
         }
     }
     IEnumerator OnGameStart()
@@ -227,6 +238,7 @@ public class InGameUI : MonoBehaviour
     {
         //Updates score UI
         scoretext.text = "Score: " + Score.score;
+
     }
 
     IEnumerator BackToMenu()
@@ -257,7 +269,7 @@ public class InGameUI : MonoBehaviour
             WikiButton.SetActive(false);
             v1Index.enabled = false;
             v2Index.enabled = false;
-            pageTurningSound();
+            PageTurningSound();
             MapButton.SetActive(false);
         }
     }
@@ -272,7 +284,7 @@ public class InGameUI : MonoBehaviour
             WikiButton.SetActive(false);
             v1Index.enabled = false;
             v2Index.enabled = false;
-            pageTurningSound();
+            PageTurningSound();
             MapButton.SetActive(true);
         }
     }
@@ -288,7 +300,7 @@ public class InGameUI : MonoBehaviour
             MenuButton.SetActive(false);
             v1Index.enabled = false;
             v2Index.enabled = false;
-            pageTurningSound();
+            PageTurningSound();
             WikiButton.SetActive(true);
         }
     }
@@ -300,7 +312,7 @@ public class InGameUI : MonoBehaviour
         MenuButton.SetActive(false);
         v1Index.enabled = false;
         v2Index.enabled = false;
-        pageTurningSound();
+        PageTurningSound();
         WikiButton.SetActive(false);
     }
 
@@ -314,7 +326,7 @@ public class InGameUI : MonoBehaviour
             MenuButton.SetActive(false);
             MapButton.SetActive(false);
             v2Index.enabled = false;
-            pageTurningSound();
+            PageTurningSound();
             v1Index.enabled = true;
         }
     }
@@ -329,7 +341,7 @@ public class InGameUI : MonoBehaviour
             MenuButton.SetActive(false);
             MapButton.SetActive(false);
             v1Index.enabled = false;
-            pageTurningSound();
+            PageTurningSound();
             v2Index.enabled = true;
         }
     }
@@ -344,21 +356,21 @@ public class InGameUI : MonoBehaviour
     }
 
     //Various sound functions
-    void ambienceVolumeLower()
+    void AmbienceVolumeLower()
     {
-        
-        AudioListener.volume = 0.3f;
+
+        scriptA.LowerAudio();
 
     }
 
-    void ambienceVolumeHigher()
+    void AmbienceVolumeHigher()
     {
-        
-        AudioListener.volume = 1f;
+
+        scriptA.HigherAudio();
 
     }
 
-    void journalOpeningSound()
+    void JournalOpeningSound()
     {
 
         myAudio.pitch = 1f;
@@ -368,7 +380,7 @@ public class InGameUI : MonoBehaviour
 
     }
 
-    void journalClosingSound()
+    void JournalClosingSound()
     {
 
         myAudio.pitch = 1f;
@@ -378,13 +390,31 @@ public class InGameUI : MonoBehaviour
 
     }
 
-    void pageTurningSound()
+    void PageTurningSound()
     {
 
         myAudio.pitch = 1.1f;
         myAudio.volume = 0.765f;
         myAudio.clip = pageTurning;
         myAudio.Play();
+
+    }
+
+    public void JoystickVisible()
+    {
+
+        joystickOuter.enabled = true;
+        joystickInner.enabled = true;
+        joystickInvisible.enabled = false;
+
+    }
+
+    public void JoystickInvisible()
+    {
+
+        joystickOuter.enabled = false;
+        joystickInner.enabled = false;
+        joystickInvisible.enabled = true;
 
     }
 
