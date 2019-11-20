@@ -17,6 +17,8 @@ public class AreaComplete : MonoBehaviour
     public GameObject Canvas;
     public GameObject scorePrefab;
 
+    bool pointsgiven = false;
+
     
 
     private void OnTriggerEnter(Collider other)
@@ -32,7 +34,7 @@ public class AreaComplete : MonoBehaviour
         fogs.RemoveAll(GameObject => GameObject == null);
         if (fogs.Count == 0)
         {
-            Score.score += 200;
+            
             
 
             playScoreSound();
@@ -52,6 +54,9 @@ public class AreaComplete : MonoBehaviour
 
     IEnumerator TextUI ()
     {
+    if (pointsgiven == false) {
+        pointsgiven = true;
+        Score.score += 200;
         completeText.SetActive(true);
         yield return new WaitForSeconds(2f);
         completeText.SetActive(false);
@@ -61,6 +66,7 @@ public class AreaComplete : MonoBehaviour
 
 
         Destroy(this);
+         }
     }
 
 }
