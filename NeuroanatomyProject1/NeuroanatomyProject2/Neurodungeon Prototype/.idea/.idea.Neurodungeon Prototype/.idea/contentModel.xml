@@ -58,7 +58,6 @@
           <e p="FogofWar.cs" t="Include" />
           <e p="FootstepAudioScript.cs" t="Include" />
           <e p="InGameUI.cs" t="Include" />
-          <e p="JournalPopUpTrigger.cs" t="Include" />
           <e p="Key.cs" t="Include" />
           <e p="LightVariation.cs" t="Include" />
           <e p="MainRoomMusicScript.cs" t="Include" />
@@ -70,8 +69,12 @@
           <e p="PrisonerSaved.cs" t="Include" />
           <e p="QuestionIndexer.cs" t="Include" />
           <e p="questionManager.cs" t="Include" />
+          <e p="QuestionRevisionManager.cs" t="Include" />
           <e p="RemoveMarking.cs" t="Include" />
+          <e p="SceneAudioVolumeScript.cs" t="Include" />
           <e p="Score.cs" t="Include" />
+          <e p="ScoreEarnedDestroyScript.cs" t="Include" />
+          <e p="SliderValueText.cs" t="Include" />
           <e p="SmashingObjectsAudioScript.cs" t="Include" />
           <e p="ToggleObjectCanvas.cs" t="Include" />
           <e p="TorchAudioScript.cs" t="Include" />
