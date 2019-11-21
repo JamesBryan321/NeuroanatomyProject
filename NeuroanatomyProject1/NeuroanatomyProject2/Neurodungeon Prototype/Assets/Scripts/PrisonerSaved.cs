@@ -6,6 +6,8 @@ public class PrisonerSaved : MonoBehaviour
 
     public GameObject mainRoomAudio;
     AudioSource myAudio;
+
+    private Collider myCollider;
     
     private Animator prisonerAnimator;
 
@@ -13,7 +15,8 @@ public class PrisonerSaved : MonoBehaviour
     {
         mainRoomAudio.SetActive(false);
         myAudio = GetComponent<AudioSource>();
-    }
+        myCollider = GetComponent<Collider>();
+            }
 
     public void Dance()
     {
@@ -29,6 +32,8 @@ public class PrisonerSaved : MonoBehaviour
             transform.position = waypoint.position;
             mainRoomAudio.SetActive(true);
             myAudio.enabled = false;
+            myCollider.enabled = false;
+            
         }
     }
 }
