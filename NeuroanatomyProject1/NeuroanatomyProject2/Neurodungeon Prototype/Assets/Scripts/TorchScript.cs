@@ -8,6 +8,8 @@ public class TorchScript : MonoBehaviour
     public GameObject LightSourceTwo;
     public bool UncoverMap;
     public GameObject MapPart;
+    public GameObject Canvas;
+    public GameObject scorePrefab;
 
     AudioSource myAudio;
 
@@ -36,6 +38,8 @@ public class TorchScript : MonoBehaviour
             {
                 Destroy(fog);
                 Score.score += 5;
+                GameObject Text = Instantiate(scorePrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
+                Text.transform.SetParent(Canvas.transform);
             }
             if (UncoverMap == true)
             {

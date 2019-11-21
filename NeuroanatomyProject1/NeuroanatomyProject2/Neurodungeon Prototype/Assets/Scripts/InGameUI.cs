@@ -24,7 +24,11 @@ public class InGameUI : MonoBehaviour
     public GameObject clue1;
     public GameObject WikiButton;
     public GameObject RevisionButton;
-   //Images
+    public GameObject Canvas;
+    public GameObject scorePlusPrefab;
+    public GameObject scoreMinusPrefab;
+
+    //Images
     public Image joystickOuter, joystickInner, joystickInvisible;
 
     public Canvas v1Index;
@@ -216,6 +220,8 @@ public class InGameUI : MonoBehaviour
         answersAudio.clip = rightAnswer;
         answersAudio.Play();
         Score.score += 25;
+        GameObject Text = Instantiate(scorePlusPrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
+        Text.transform.SetParent(Canvas.transform);
         currentAnimator.SetBool("Correct", true);
     }
 
@@ -339,6 +345,8 @@ public class InGameUI : MonoBehaviour
         answersAudio.clip = wrongAnswer;
         answersAudio.Play();
         Score.score -= 25;
+        GameObject Text = Instantiate(scoreMinusPrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
+        Text.transform.SetParent(Canvas.transform);
     }
 
     //Various sound functions

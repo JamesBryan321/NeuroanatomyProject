@@ -154,6 +154,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Destroyedversion: {fileID: 6414373960111431178, guid: 6a7ff732117964beb87b99ef3538c0a1,
     type: 3}
+  Canvas: {fileID: 0}
+  scorePrefab: {fileID: 6704270734828059891, guid: c8c4cfc5cfffde84e8be843b98dd081f,
+    type: 3}
 --- !u!114 &5546914515384449790
 MonoBehaviour:
   m_ObjectHideFlags: 0
