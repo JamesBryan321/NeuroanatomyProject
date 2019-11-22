@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
     
         if(joystickEnabled == false)
     {
+        m_animator.SetBool("run", false);
         return;
     }
     
