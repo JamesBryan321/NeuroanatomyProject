@@ -109,7 +109,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PopUpController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="397">
@@ -153,16 +153,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/clickObject.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="562">
+              <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
               <folding>
-                <marker date="1574388692126" expanded="true" signature="60:1816" ph="{...}" />
-                <marker date="1574388692126" expanded="true" signature="456:1814" ph="{...}" />
-                <marker date="1574388692126" expanded="true" signature="524:1808" ph="{...}" />
-                <marker date="1574388692126" expanded="true" signature="625:1799" ph="{...}" />
-                <marker date="1574388692126" expanded="true" signature="873:1789" ph="{...}" />
-                <marker date="1574388692126" expanded="true" signature="982:1566" ph="{...}" />
-                <marker date="1574388692126" expanded="true" signature="1630:1775" ph="{...}" />
+                <marker date="1574393034290" expanded="true" signature="60:2193" ph="{...}" />
+                <marker date="1574393034290" expanded="true" signature="500:2191" ph="{...}" />
+                <marker date="1574393034290" expanded="true" signature="568:2185" ph="{...}" />
+                <marker date="1574393034290" expanded="true" signature="669:2176" ph="{...}" />
+                <marker date="1574393034290" expanded="true" signature="987:1903" ph="{...}" />
+                <marker date="1574393034290" expanded="true" signature="1096:1680" ph="{...}" />
+                <marker date="1574393034290" expanded="true" signature="1744:1889" ph="{...}" />
+                <marker date="1574393034290" expanded="true" signature="1979:2166" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Destructable.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="78" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
+              <folding>
+                <marker date="1574393395351" expanded="true" signature="61:863" ph="{...}" />
+                <marker date="1574393395351" expanded="true" signature="176:507" ph="/* private void OnMouseDown() ... */" />
+                <marker date="1574393395351" expanded="true" signature="532:861" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -196,22 +211,6 @@
                 <marker date="1574381190977" expanded="true" signature="66:655" ph="{...}" />
                 <marker date="1574381190977" expanded="true" signature="273:467" ph="{...}" />
                 <marker date="1574381190977" expanded="true" signature="493:653" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ToggleObjectCanvas.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <marker date="1574112113516" expanded="true" signature="67:589" ph="{...}" />
-                <marker date="1574112113516" expanded="true" signature="131:236" ph="{...}" />
-                <marker date="1574112113516" expanded="true" signature="268:587" ph="{...}" />
-                <marker date="1574112113516" expanded="true" signature="316:421" ph="{...}" />
-                <marker date="1574112113516" expanded="true" signature="476:581" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -269,11 +268,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/questionManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/QuestionIndexer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PrisonerSaved.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/clickObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClosePopUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CloseInteractable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PopUpController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/clickObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Destructable.cs" />
       </list>
     </option>
   </component>
@@ -283,8 +283,8 @@
     </ignored-facets>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="269" />
-    <option name="y" value="153" />
+    <option name="x" value="454" />
+    <option name="y" value="162" />
     <option name="width" value="1145" />
     <option name="height" value="930" />
   </component>
@@ -355,7 +355,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55364000" />
+    <option name="totallyTimeSpent" value="57457000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,8 +367,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="269" y="153" width="1145" height="930" extended-state="0" />
-    <editor active="true" />
+    <frame x="454" y="162" width="1145" height="930" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.10506912" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -523,22 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/clickObject.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <marker date="1574388692126" expanded="true" signature="60:1816" ph="{...}" />
-            <marker date="1574388692126" expanded="true" signature="456:1814" ph="{...}" />
-            <marker date="1574388692126" expanded="true" signature="524:1808" ph="{...}" />
-            <marker date="1574388692126" expanded="true" signature="625:1799" ph="{...}" />
-            <marker date="1574388692126" expanded="true" signature="873:1789" ph="{...}" />
-            <marker date="1574388692126" expanded="true" signature="982:1566" ph="{...}" />
-            <marker date="1574388692126" expanded="true" signature="1630:1775" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CloseInteractable.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -594,17 +577,6 @@
             <marker date="1574112113532" expanded="true" signature="675:779" ph="{...}" />
             <marker date="1574112113532" expanded="true" signature="821:925" ph="{...}" />
             <marker date="1574112113532" expanded="true" signature="968:1071" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Destructable.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <marker date="1574388692130" expanded="true" signature="61:505" ph="{...}" />
-            <marker date="1574388692130" expanded="true" signature="202:503" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -688,6 +660,35 @@
             <marker date="1574392294526" expanded="true" signature="2499:2618" ph="{...}" />
             <marker date="1574392294526" expanded="true" signature="2662:2781" ph="{...}" />
             <marker date="1574392294526" expanded="true" signature="2821:2977" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/clickObject.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+          <folding>
+            <marker date="1574393034290" expanded="true" signature="60:2193" ph="{...}" />
+            <marker date="1574393034290" expanded="true" signature="500:2191" ph="{...}" />
+            <marker date="1574393034290" expanded="true" signature="568:2185" ph="{...}" />
+            <marker date="1574393034290" expanded="true" signature="669:2176" ph="{...}" />
+            <marker date="1574393034290" expanded="true" signature="987:1903" ph="{...}" />
+            <marker date="1574393034290" expanded="true" signature="1096:1680" ph="{...}" />
+            <marker date="1574393034290" expanded="true" signature="1744:1889" ph="{...}" />
+            <marker date="1574393034290" expanded="true" signature="1979:2166" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Destructable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="78" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
+          <folding>
+            <marker date="1574393395351" expanded="true" signature="61:863" ph="{...}" />
+            <marker date="1574393395351" expanded="true" signature="176:507" ph="/* private void OnMouseDown() ... */" />
+            <marker date="1574393395351" expanded="true" signature="532:861" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -12,6 +12,7 @@ public class clickObject : MonoBehaviour
     public AudioClip journalOpening;
     public static bool canInteract = true;
     public Player playerScript;
+    public Destructable destructableScript;
 
     void Update () 
     {
@@ -23,6 +24,7 @@ public class clickObject : MonoBehaviour
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
             int layer_mask = LayerMask.GetMask("Interactable");
+            int destructableMask = LayerMask.GetMask("Destructable");
             if (Physics.Raycast(ray, out hitInfo, 1000, layer_mask))
             {
                 var rig = hitInfo.collider;
@@ -47,6 +49,13 @@ public class clickObject : MonoBehaviour
                     pUController.CloseInteractableHint();
                     playerScript.UnlockJoystick();
                 }
+            }
+
+            if (Physics.Raycast(ray, out hitInfo, 1000, destructableMask))
+            {
+                var rig = hitInfo.collider;
+                destructableScript = rig.GetComponent<Destructable>();
+                destructableScript.Break();
             }
         }
        }
