@@ -11,6 +11,7 @@ public class clickObject : MonoBehaviour
     public AudioSource objectAudio;
     public AudioClip journalOpening;
     public static bool canInteract = true;
+    public Player playerScript;
 
     void Update () 
     {
@@ -30,6 +31,7 @@ public class clickObject : MonoBehaviour
                     canvasToggle = rig.GetComponent<ToggleObjectCanvas>();
                     Debug.Log(rig.name);
                     canvasToggle.ToggleCanvas();
+                    playerScript.LockJoystick();
 
                     objectAudio.clip = journalOpening;
                     objectAudio.Play();
@@ -43,6 +45,7 @@ public class clickObject : MonoBehaviour
                 if (pUController.interactableHintInteger == 1)
                 {
                     pUController.CloseInteractableHint();
+                    playerScript.UnlockJoystick();
                 }
             }
         }

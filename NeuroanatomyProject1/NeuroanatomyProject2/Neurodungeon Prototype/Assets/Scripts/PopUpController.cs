@@ -11,10 +11,14 @@ public class PopUpController : MonoBehaviour
     public int journalHintInteger;
     public int obstaclesHintInteger;
     public int prisonerHintInteger;
+    public Player playerScript;
+    //public GameObject player;
 
 
     void Start()
     {
+        //playerScript = player.GetComponent<Player>();
+        
         for (int i = 1; i < popUps.Length; i++)
         {
             popUps[i].SetActive(false);
@@ -26,6 +30,7 @@ public class PopUpController : MonoBehaviour
     {
         popUps[1].SetActive(true);
         moveHintInteger = 1;
+        //playerScript.LockJoystick();
     }
 
     public void CloseMoveHint()
@@ -33,18 +38,21 @@ public class PopUpController : MonoBehaviour
 
         popUps[1].SetActive(false);
         moveHintInteger = 0;
+        //playerScript.UnlockJoystick();
     }
 
     public void OpenInteractableHint()
     {
         popUps[2].SetActive(true);
         interactableHintInteger = 1;
+        playerScript.LockJoystick();
     }
     
     public void CloseInteractableHint()
     {
         popUps[2].SetActive(false);
         interactableHintInteger = 0;
+        playerScript.UnlockJoystick();
     }
     
     public void OpenJournalHint()
@@ -56,32 +64,38 @@ public class PopUpController : MonoBehaviour
         moveHintInteger = 0;
         interactableHintInteger = 0;
         journalHintInteger = 1;
+        playerScript.LockJoystick();
     }
     
     public void CloseJournalHint()
     {
         popUps[3].SetActive(false);
         journalHintInteger = 0;
+        playerScript.UnlockJoystick();
     }
 
     public void OpenObstacleHint ()
     {
         popUps[4].SetActive(true);
         obstaclesHintInteger = 1;
+        playerScript.LockJoystick();
     }
     public void CloseObstacleHint()
     {
         popUps[4].SetActive(true);
         obstaclesHintInteger = 0;
+        playerScript.UnlockJoystick();
     }
     public void OpenPrisonerHint()
     {
         popUps[5].SetActive(true);
         prisonerHintInteger = 1;
+        playerScript.LockJoystick();
     }
     public void ClosePrisonerHint()
     {
         popUps[5].SetActive(true);
         prisonerHintInteger = 0;
+        playerScript.UnlockJoystick();
     }
 }

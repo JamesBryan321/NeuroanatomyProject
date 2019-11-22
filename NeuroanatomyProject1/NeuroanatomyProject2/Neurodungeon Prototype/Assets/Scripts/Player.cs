@@ -13,16 +13,35 @@ public class Player : MonoBehaviour
 
     public PopUpController pUController;
     
+    public bool joystickEnabled;
+    
     void Start()
     {
         //Sets up components
         rb = GetComponent<Rigidbody>();
         m_animator = GetComponent<Animator>();
         m_animator.SetBool("run", false);
+        
+    }
+
+    public void LockJoystick()
+    {
+        joystickEnabled = false;
+    }
+
+    public void UnlockJoystick()
+    {
+        joystickEnabled = true;
     }
 
     void Update()
     {
+    
+        if(joystickEnabled == false)
+    {
+        return;
+    }
+    
     //Sound effects for footsteps should be added as animation events
         //Sets up physics
         rb.velocity = new Vector3(joyStick1.Horizontal * PlayerSpeed, rb.velocity.y,
