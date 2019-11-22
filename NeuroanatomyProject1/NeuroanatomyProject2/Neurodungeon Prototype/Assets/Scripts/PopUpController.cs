@@ -9,6 +9,7 @@ public class PopUpController : MonoBehaviour
     public int moveHintInteger = 1;
     public int interactableHintInteger;
     public int journalHintInteger;
+    public int journalCloseHintInteger;
     public int obstaclesHintInteger;
     public int prisonerHintInteger;
     public Player playerScript;
@@ -72,6 +73,13 @@ public class PopUpController : MonoBehaviour
         popUps[3].SetActive(false);
         journalHintInteger = 0;
         playerScript.UnlockJoystick();
+        if (journalCloseHintInteger == 1)
+        {
+            Debug.Log("error :-(");
+            CloseJournalCloseHint();
+            return;
+        }
+        OpenJournalCloseHint();
     }
 
     public void OpenObstacleHint ()
@@ -97,5 +105,19 @@ public class PopUpController : MonoBehaviour
         popUps[5].SetActive(true);
         prisonerHintInteger = 0;
         playerScript.UnlockJoystick();
+    }
+    
+    public void OpenJournalCloseHint()
+    {
+        popUps[6].SetActive(true);
+        journalCloseHintInteger++;
+        playerScript.LockJoystick();
+    }
+    public void CloseJournalCloseHint()
+    {
+        popUps[6].SetActive(false);
+        //journalCloseHintInteger = 0;
+        playerScript.UnlockJoystick();
+        //Destroy(popUps[6]);
     }
 }
