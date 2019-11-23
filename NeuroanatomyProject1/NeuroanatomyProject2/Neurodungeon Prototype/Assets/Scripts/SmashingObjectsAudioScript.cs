@@ -13,7 +13,7 @@ public class SmashingObjectsAudioScript : MonoBehaviour
 
         myAudio = GetComponent<AudioSource>();
 
-        myAudio.volume = Random.Range(0.04f, 0.11f);
+        myAudio.volume = Random.Range(0.16f, 0.20f);
         myAudio.pitch = Random.Range(0.85f, 0.95f);
         
     }

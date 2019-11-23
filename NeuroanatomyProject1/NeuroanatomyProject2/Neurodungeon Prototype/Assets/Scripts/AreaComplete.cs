@@ -46,7 +46,7 @@ public class AreaComplete : MonoBehaviour
     void playScoreSound()
     {
 
-        gameManagementAudio.volume = 0.16f;
+        gameManagementAudio.volume = 0.23f;
         gameManagementAudio.clip = scoreSound;
         gameManagementAudio.Play();
 
@@ -57,12 +57,13 @@ public class AreaComplete : MonoBehaviour
     if (pointsgiven == false) {
         pointsgiven = true;
         Score.score += 200;
+        GameObject Text = Instantiate(scorePrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
+        Text.transform.SetParent(Canvas.transform);
         completeText.SetActive(true);
         yield return new WaitForSeconds(2f);
         completeText.SetActive(false);
 
-        GameObject Text = Instantiate(scorePrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
-        Text.transform.SetParent(Canvas.transform);
+       
 
 
         Destroy(this);

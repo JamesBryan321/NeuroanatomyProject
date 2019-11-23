@@ -216,7 +216,7 @@ public class InGameUI : MonoBehaviour
     
     public void OnRightAnswer()
     {
-        answersAudio.volume = 0.05f;
+        answersAudio.volume = 0.07f;
         answersAudio.clip = rightAnswer;
         answersAudio.Play();
         Score.score += 25;
@@ -341,7 +341,7 @@ public class InGameUI : MonoBehaviour
     public void OnWrongAnswer()
     {
         //Handles the wrong answers
-        answersAudio.volume = 0.245f;
+        answersAudio.volume = 0.275f;
         answersAudio.clip = wrongAnswer;
         answersAudio.Play();
         Score.score -= 25;
@@ -368,7 +368,7 @@ public class InGameUI : MonoBehaviour
     {
 
         myAudio.pitch = 1f;
-        myAudio.volume = 0.38f;
+        myAudio.volume = 0.64f;
         myAudio.clip = journalOpening;
         myAudio.Play();
 
@@ -378,7 +378,7 @@ public class InGameUI : MonoBehaviour
     {
 
         myAudio.pitch = 1f;
-        myAudio.volume = 0.16f;
+        myAudio.volume = 0.26f;
         myAudio.clip = journalClosing;
         myAudio.Play();
 
@@ -388,7 +388,7 @@ public class InGameUI : MonoBehaviour
     {
 
         myAudio.pitch = 1.1f;
-        myAudio.volume = 0.765f;
+        myAudio.volume = 1.4f;
         myAudio.clip = pageTurning;
         myAudio.Play();
 

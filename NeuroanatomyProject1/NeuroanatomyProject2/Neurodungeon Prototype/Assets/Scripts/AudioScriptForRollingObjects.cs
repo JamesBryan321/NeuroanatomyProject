@@ -27,7 +27,7 @@ public class AudioScriptForRollingObjects : MonoBehaviour
         if(other.tag == "Ground")
         {
 
-            myAudio.volume = Random.Range(0.01f, 0.03f);
+            myAudio.volume = Random.Range(0.05f, 0.09f);
             myAudio.Play();
 
         }

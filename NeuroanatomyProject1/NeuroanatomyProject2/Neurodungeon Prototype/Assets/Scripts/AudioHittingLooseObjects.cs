@@ -43,7 +43,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
         {
 
             myAudio.clip = hardAudio;
-            myAudio.volume = Random.Range(0.03f, 0.08f);
+            myAudio.volume = Random.Range(0.1f, 0.14f);
             myAudio.pitch = Random.Range(0.9f, 1f);
             myAudio.Play();
 
@@ -56,7 +56,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
         {
 
             myAudio.clip = squishyAudio;
-            myAudio.volume = Random.Range(0.18f, 0.25f);
+            myAudio.volume = Random.Range(0.28f, 0.33f);
             myAudio.pitch = Random.Range(0.9f, 1f);
             myAudio.Play();
 
@@ -83,7 +83,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
         {
 
             myAudio.clip = metalAudio;
-            myAudio.volume = Random.Range(0.12f, 0.18f);
+            myAudio.volume = Random.Range(0.19f, 0.23f);
             myAudio.pitch = Random.Range(0.95f, 1f);
             myAudio.Play();
 
@@ -96,7 +96,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
         {
 
             myAudio.clip = woodAudio;
-            myAudio.volume = Random.Range(0.12f, 0.18f);
+            myAudio.volume = Random.Range(0.19f, 0.23f);
             myAudio.pitch = Random.Range(0.95f, 1f);
             myAudio.Play();
 
@@ -109,7 +109,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
         {
 
             myAudio.clip = wallAudio;
-            myAudio.volume = Random.Range(0.12f, 0.18f);
+            myAudio.volume = Random.Range(0.19f, 0.24f);
             myAudio.pitch = Random.Range(0.95f, 1f);
             myAudio.Play();
 
