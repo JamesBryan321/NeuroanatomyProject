@@ -34,14 +34,13 @@ public class TorchScript : MonoBehaviour
             LightSourceTwo.SetActive(true);
             GetComponent<Collider>().enabled = false;
 
-            Score.score += 75;
+            Score.score += 25;
             GameObject Text = Instantiate(scorePrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
             Text.transform.SetParent(Canvas.transform);
 
             foreach (GameObject fog in fogs)
             {
-                Destroy(fog);
-                
+                fog.GetComponent<Animator>().SetBool("cleared", true);               
                 
             }
             if (UncoverMap == true)
