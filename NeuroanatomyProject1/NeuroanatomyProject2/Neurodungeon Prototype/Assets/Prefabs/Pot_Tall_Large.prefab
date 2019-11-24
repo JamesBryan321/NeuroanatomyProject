@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5212492146562504252}
   - component: {fileID: 5212492146562504249}
   - component: {fileID: 5212492146562504254}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pot_Tall_Large
   m_TagString: Glass
   m_Icon: {fileID: 0}

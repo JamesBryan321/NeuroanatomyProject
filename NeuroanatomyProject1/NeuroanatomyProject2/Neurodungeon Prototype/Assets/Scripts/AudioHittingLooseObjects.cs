@@ -69,6 +69,8 @@ public class AudioHittingLooseObjects : MonoBehaviour
         {
 
             int glassIndex = Random.Range(0, glassAudio.Length);
+            myAudio.volume = Random.Range(0.18f, 0.23f);
+            myAudio.pitch = Random.Range(0.95f, 1f);
             glassSoundEffect = glassAudio[glassIndex];
             myAudio.clip = glassSoundEffect;
             myAudio.Play();
@@ -83,7 +85,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
         {
 
             myAudio.clip = metalAudio;
-            myAudio.volume = Random.Range(0.19f, 0.23f);
+            myAudio.volume = Random.Range(0.25f, 0.29f);
             myAudio.pitch = Random.Range(0.95f, 1f);
             myAudio.Play();
 
@@ -96,7 +98,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
         {
 
             myAudio.clip = woodAudio;
-            myAudio.volume = Random.Range(0.19f, 0.23f);
+            myAudio.volume = Random.Range(0.26f, 0.30f);
             myAudio.pitch = Random.Range(0.95f, 1f);
             myAudio.Play();
 

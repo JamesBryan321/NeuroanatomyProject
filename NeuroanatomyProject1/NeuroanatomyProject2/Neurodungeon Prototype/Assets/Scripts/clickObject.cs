@@ -13,6 +13,7 @@ public class clickObject : MonoBehaviour
     public static bool canInteract = true;
     public Player playerScript;
     public Destructable destructableScript;
+    public BrainScript brainScript;
 
     void Update () 
     {
@@ -25,6 +26,7 @@ public class clickObject : MonoBehaviour
             RaycastHit hitInfo;
             int layer_mask = LayerMask.GetMask("Interactable");
             int destructableMask = LayerMask.GetMask("Destructable");
+                int brainMask = LayerMask.GetMask("Brain");
             if (Physics.Raycast(ray, out hitInfo, 1000, layer_mask))
             {
                 var rig = hitInfo.collider;
@@ -57,7 +59,17 @@ public class clickObject : MonoBehaviour
                 destructableScript = rig.GetComponent<Destructable>();
                 destructableScript.Break();
             }
-        }
+
+                if (Physics.Raycast(ray, out hitInfo, 1000, brainMask))
+                {
+
+                    var rig = hitInfo.collider;
+                    brainScript = rig.GetComponent<BrainScript>();
+                    brainScript.BrainHit();
+                    
+                }
+
+            }
        }
     }
 }

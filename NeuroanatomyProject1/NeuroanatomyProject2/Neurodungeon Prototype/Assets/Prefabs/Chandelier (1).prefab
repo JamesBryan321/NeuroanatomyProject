@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9207419705483269737}
   - component: {fileID: 9207419705483269736}
   - component: {fileID: 9207419705483269735}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chandelier (1)
   m_TagString: Metal
   m_Icon: {fileID: 0}
