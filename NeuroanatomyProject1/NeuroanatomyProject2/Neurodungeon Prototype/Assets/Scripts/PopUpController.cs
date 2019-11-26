@@ -73,9 +73,9 @@ public class PopUpController : MonoBehaviour
         popUps[3].SetActive(false);
         journalHintInteger = 0;
         playerScript.UnlockJoystick();
+        CloseJournalCloseHint();
         if (journalCloseHintInteger == 1)
         {
-            Debug.Log("error :-(");
             CloseJournalCloseHint();
             return;
         }
