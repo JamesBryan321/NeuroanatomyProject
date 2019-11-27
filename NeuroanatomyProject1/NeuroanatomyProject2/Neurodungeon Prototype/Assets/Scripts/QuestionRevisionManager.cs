@@ -9,6 +9,16 @@ public class QuestionRevisionManager : MonoBehaviour
     public GameObject question2;
     public GameObject question3;
     public GameObject question4;
+    public GameObject question5;
+    public GameObject question6;
+    public GameObject question7;
+    public GameObject question8;
+    public GameObject question9;
+    public GameObject question10;
+    public GameObject question11;
+    public GameObject question12;
+    public GameObject question13;
+    public GameObject question14;
     public GameObject ingameUI;
     private void Start()
     {
@@ -54,5 +64,58 @@ public class QuestionRevisionManager : MonoBehaviour
     {
         ingameUI.SetActive(false);
         question4.GetComponent<Canvas>().enabled = true;
+
+    }
+    public void Question5()
+    {
+        ingameUI.SetActive(false);
+        question5.GetComponent<Canvas>().enabled = true;
+    }
+    public void Question6()
+    {
+        ingameUI.SetActive(false);
+        question6.GetComponent<Canvas>().enabled = true;
+    }
+    public void Question7()
+    {
+        ingameUI.SetActive(false);
+        question7.GetComponent<Canvas>().enabled = true;
+    }
+    public void Question8()
+    {
+        ingameUI.SetActive(false);
+        question8.GetComponent<Canvas>().enabled = true;
+
+    }
+    public void Question9()
+    {
+        ingameUI.SetActive(false);
+        question9.GetComponent<Canvas>().enabled = true;
+    }
+    public void Question10()
+    {
+        ingameUI.SetActive(false);
+        question10.GetComponent<Canvas>().enabled = true;
+    }
+    public void Question11()
+    {
+        ingameUI.SetActive(false);
+        question11.GetComponent<Canvas>().enabled = true;
+    }
+    public void Question12()
+    {
+        ingameUI.SetActive(false);
+        question12.GetComponent<Canvas>().enabled = true;
+
+    }
+    public void Question13()
+    {
+        ingameUI.SetActive(false);
+        question13.GetComponent<Canvas>().enabled = true;
+    }
+    public void Question14()
+    {
+        ingameUI.SetActive(false);
+        question14.GetComponent<Canvas>().enabled = true;
     }
 }
