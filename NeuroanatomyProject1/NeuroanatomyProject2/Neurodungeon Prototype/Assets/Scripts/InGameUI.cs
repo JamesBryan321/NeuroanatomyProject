@@ -118,89 +118,6 @@ public class InGameUI : MonoBehaviour
                 clickObject.canInteract = true;
         }
     }
-
-    public void OpenQuestion(int questionIndex)
-    {
-        //Handles the questions asked when interacting with game world
-        if (questionIndex == 1)
-        {
-            if (question1.activeSelf == false)
-            {
-                question1.SetActive(true);
-                JournalOpeningSound();
-                AmbienceVolumeLower();
-            }
-            else if (question1.activeSelf == true)
-            {              
-                question1.SetActive(false);
-                GameObject.Find("Door1").tag = "notInteractable";
-                JournalClosingSound();
-                AmbienceVolumeHigher();
-            }
-         
-        }
-        
-        if (questionIndex == 2)
-        {
-            if (question2.activeSelf == false)
-            {
-                question2.SetActive(true);
-                JournalOpeningSound();
-                AmbienceVolumeLower();
-            }
-            else if (question2.activeSelf == true)
-            {
-                question2.SetActive(false);
-                GameObject.Find("Prison_Door").tag = "notInteractable";
-                JournalClosingSound();
-                p1Animator.SetBool("Correct", true);
-                prisonCell1Animator.SetBool("Correct", true);            
-                AmbienceVolumeHigher();
-            }
-        }
-
-        if (questionIndex == 3)
-        {
-            if (clue1.activeSelf == false)
-            {
-                clue1.SetActive(true);
-                JournalOpeningSound();
-                AmbienceVolumeLower();
-            }
-            else if (clue1.activeSelf == true)
-            {
-                clue1.SetActive(false);
-                JournalClosingSound();
-                AmbienceVolumeHigher();
-            }
-        }
-    }
-
-    public void ExitQuestion (int questionIndex)
-    {
-        //Handles exiting questions with no answer selected
-        if (questionIndex == 1)
-        {
-                question1.SetActive(false);
-                JournalClosingSound();
-                AmbienceVolumeHigher();
-        }
-
-        if (questionIndex == 2)
-        {
-           
-                question2.SetActive(false);
-                JournalClosingSound();
-                AmbienceVolumeHigher();
-        }
-
-        if (questionIndex == 3)
-        {
-                clue1.SetActive(false);
-                JournalClosingSound();
-                AmbienceVolumeHigher();
-        }
-    }
     IEnumerator OnGameStart()
     { 
         //Handles game transition
@@ -224,8 +141,18 @@ public class InGameUI : MonoBehaviour
         Text.transform.SetParent(Canvas.transform);
         currentAnimator.SetBool("Correct", true);
     }
+    public void OnWrongAnswer()
+    {
+        //Handles the wrong answers
+        answersAudio.volume = 0.275f;
+        answersAudio.clip = wrongAnswer;
+        answersAudio.Play();
+        Score.score -= 25;
+        GameObject Text = Instantiate(scoreMinusPrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
+        Text.transform.SetParent(Canvas.transform);
+    }
 
-    
+
     void Update()
     {
         //Updates score UI
@@ -338,16 +265,7 @@ public class InGameUI : MonoBehaviour
         }
     }
 
-    public void OnWrongAnswer()
-    {
-        //Handles the wrong answers
-        answersAudio.volume = 0.275f;
-        answersAudio.clip = wrongAnswer;
-        answersAudio.Play();
-        Score.score -= 25;
-        GameObject Text = Instantiate(scoreMinusPrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
-        Text.transform.SetParent(Canvas.transform);
-    }
+
 
     //Various sound functions
     void AmbienceVolumeLower()

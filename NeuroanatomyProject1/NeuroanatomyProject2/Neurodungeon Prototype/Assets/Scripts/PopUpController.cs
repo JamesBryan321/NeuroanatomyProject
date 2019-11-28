@@ -84,6 +84,7 @@ public class PopUpController : MonoBehaviour
 
     public void OpenObstacleHint ()
     {
+        
         popUps[4].SetActive(true);
         obstaclesHintInteger = 1;
         playerScript.LockJoystick();
@@ -93,9 +94,11 @@ public class PopUpController : MonoBehaviour
         popUps[4].SetActive(true);
         obstaclesHintInteger = 0;
         playerScript.UnlockJoystick();
+
     }
     public void OpenPrisonerHint()
     {
+       // clickObject.canInteract = false;
         popUps[5].SetActive(true);
         prisonerHintInteger = 1;
         playerScript.LockJoystick();

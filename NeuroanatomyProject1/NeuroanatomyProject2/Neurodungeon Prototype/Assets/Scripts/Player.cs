@@ -27,11 +27,13 @@ public class Player : MonoBehaviour
     public void LockJoystick()
     {
         joystickEnabled = false;
+        clickObject.canInteract = false;
     }
 
     public void UnlockJoystick()
     {
         joystickEnabled = true;
+        clickObject.canInteract = true;
     }
 
     void Update()

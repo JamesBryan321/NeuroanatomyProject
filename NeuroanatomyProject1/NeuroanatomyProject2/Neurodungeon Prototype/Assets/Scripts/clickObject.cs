@@ -18,22 +18,22 @@ public class clickObject : MonoBehaviour
     void Update () 
     {
         print(canInteract);
-        if (canInteract == true) { 
-        //Checks if player clicks on interactable objects
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hitInfo;
         if (Input.GetMouseButtonDown(0))
         {
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitInfo;
+            if (canInteract == true) { 
+        //Checks if player clicks on interactable objects
+
             int layer_mask = LayerMask.GetMask("Interactable");
             int destructableMask = LayerMask.GetMask("Destructable");
-                int brainMask = LayerMask.GetMask("Brain");
+            int brainMask = LayerMask.GetMask("Brain");
             if (Physics.Raycast(ray, out hitInfo, 1000, layer_mask))
             {
                 var rig = hitInfo.collider;
                 if(rig.CompareTag("Interactable"))
                 {
                     canvasToggle = rig.GetComponent<ToggleObjectCanvas>();
-                    Debug.Log(rig.name);
                     canvasToggle.ToggleCanvas();
                     playerScript.LockJoystick();
 
@@ -68,8 +68,32 @@ public class clickObject : MonoBehaviour
                     brainScript.BrainHit();
                     
                 }
+                }
+            int tutorialMask = LayerMask.GetMask("Tutorial");
+            if (Physics.Raycast(ray, out hitInfo, 1000, tutorialMask))
+            {
+                var rig = hitInfo.collider;
+                if (rig.CompareTag("Interactable"))
+                {
+                    canvasToggle = rig.GetComponent<ToggleObjectCanvas>();
+                    canvasToggle.ToggleCanvas();
+                    playerScript.LockJoystick();
 
+                    objectAudio.clip = journalOpening;
+                    objectAudio.Play();
+
+                    UI.currentAnimator = rig.GetComponent<Animator>();
+
+                    markingCanvasScript = rig.GetComponentInChildren<RemoveMarking>();
+                    markingCanvasScript.DestroyMarking();
+                }
+
+                if (pUController.interactableHintInteger == 1)
+                {
+                    pUController.CloseInteractableHint();
+                    playerScript.UnlockJoystick();
+                }
             }
-       }
+        }
     }
 }

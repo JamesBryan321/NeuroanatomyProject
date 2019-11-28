@@ -8,7 +8,7 @@ public class CloseInteractable : MonoBehaviour
     public AudioClip journalClosing;
     private GameObject player;
     private Player playerScript;
-    
+
     void Start()
     {
         canvasToggle = GetComponentInParent<ToggleObjectCanvas>();
@@ -16,12 +16,18 @@ public class CloseInteractable : MonoBehaviour
         playerScript = player.GetComponent<Player>();
     }
 
-    public void Toggle()
+    public void Toggle(bool activateinteraction)
     {
+        if (activateinteraction == true)
+        {
+            playerScript.UnlockJoystick();
+        }
+        else if (activateinteraction == false)
+        {
+            clickObject.canInteract = false;
+        }
         canvasToggle.ToggleCanvas();
-
         objectAudio.clip = journalClosing;
         objectAudio.Play();
-        playerScript.UnlockJoystick();
     }
 }
