@@ -28,6 +28,8 @@ public class InGameUI : MonoBehaviour
     public GameObject scorePlusPrefab;
     public GameObject scoreMinusPrefab;
 
+    /*public RemoveMarking markingCanvasScript;*/
+
     //Images
     public Image joystickOuter, joystickInner, joystickInvisible;
 
@@ -133,18 +135,19 @@ public class InGameUI : MonoBehaviour
     
     public void OnRightAnswer()
     {
-        answersAudio.volume = 0.07f;
+        answersAudio.volume = 0.12f;
         answersAudio.clip = rightAnswer;
         answersAudio.Play();
         Score.score += 25;
         GameObject Text = Instantiate(scorePlusPrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
         Text.transform.SetParent(Canvas.transform);
         currentAnimator.SetBool("Correct", true);
+       
     }
     public void OnWrongAnswer()
     {
         //Handles the wrong answers
-        answersAudio.volume = 0.275f;
+        answersAudio.volume = 0.35f;
         answersAudio.clip = wrongAnswer;
         answersAudio.Play();
         Score.score -= 25;
@@ -286,7 +289,7 @@ public class InGameUI : MonoBehaviour
     {
 
         myAudio.pitch = 1f;
-        myAudio.volume = 0.64f;
+        myAudio.volume = 1f;
         myAudio.clip = journalOpening;
         myAudio.Play();
 
@@ -296,7 +299,7 @@ public class InGameUI : MonoBehaviour
     {
 
         myAudio.pitch = 1f;
-        myAudio.volume = 0.26f;
+        myAudio.volume = 0.34f;
         myAudio.clip = journalClosing;
         myAudio.Play();
 
@@ -305,8 +308,8 @@ public class InGameUI : MonoBehaviour
     void PageTurningSound()
     {
 
-        myAudio.pitch = 1.1f;
-        myAudio.volume = 1.4f;
+        myAudio.pitch = 1f;
+        myAudio.volume = 0.4f;
         myAudio.clip = pageTurning;
         myAudio.Play();
 

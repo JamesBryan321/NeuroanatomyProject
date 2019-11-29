@@ -14,7 +14,7 @@ public class SwingingAxeAudio : MonoBehaviour
     {
 
         myAudio = GetComponent<AudioSource>();
-        myAudio.volume = 0.5f;
+        myAudio.volume = 0.74f;
         
     }
 

@@ -43,7 +43,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
         {
 
             myAudio.clip = hardAudio;
-            myAudio.volume = Random.Range(0.1f, 0.14f);
+            myAudio.volume = Random.Range(0.19f, 0.24f);
             myAudio.pitch = Random.Range(0.9f, 1f);
             myAudio.Play();
 
@@ -56,7 +56,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
         {
 
             myAudio.clip = squishyAudio;
-            myAudio.volume = Random.Range(0.28f, 0.33f);
+            myAudio.volume = Random.Range(0.36f, 0.39f);
             myAudio.pitch = Random.Range(0.9f, 1f);
             myAudio.Play();
 
@@ -69,7 +69,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
         {
 
             int glassIndex = Random.Range(0, glassAudio.Length);
-            myAudio.volume = Random.Range(0.18f, 0.23f);
+            myAudio.volume = Random.Range(0.25f, 0.28f);
             myAudio.pitch = Random.Range(0.95f, 1f);
             glassSoundEffect = glassAudio[glassIndex];
             myAudio.clip = glassSoundEffect;
@@ -85,7 +85,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
         {
 
             myAudio.clip = metalAudio;
-            myAudio.volume = Random.Range(0.25f, 0.29f);
+            myAudio.volume = Random.Range(0.31f, 0.34f);
             myAudio.pitch = Random.Range(0.95f, 1f);
             myAudio.Play();
 
@@ -98,7 +98,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
         {
 
             myAudio.clip = woodAudio;
-            myAudio.volume = Random.Range(0.26f, 0.30f);
+            myAudio.volume = Random.Range(0.32f, 0.36f);
             myAudio.pitch = Random.Range(0.95f, 1f);
             myAudio.Play();
 
@@ -111,7 +111,7 @@ public class AudioHittingLooseObjects : MonoBehaviour
         {
 
             myAudio.clip = wallAudio;
-            myAudio.volume = Random.Range(0.19f, 0.24f);
+            myAudio.volume = Random.Range(0.27f, 0.31f);
             myAudio.pitch = Random.Range(0.95f, 1f);
             myAudio.Play();
 

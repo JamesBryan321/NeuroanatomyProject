@@ -42,7 +42,7 @@ public class AudioForLooseObjects : MonoBehaviour
         if (collision.gameObject.tag == "Player" && touchedPlayer == false)
         {
 
-            myAudio.volume = Random.Range(0.09f, 0.13f);
+            myAudio.volume = Random.Range(0.17f, 0.22f);
             myAudio.pitch = Random.Range(0.94f, 1f);
             myAudio.Play();
             touchedPlayer = true;

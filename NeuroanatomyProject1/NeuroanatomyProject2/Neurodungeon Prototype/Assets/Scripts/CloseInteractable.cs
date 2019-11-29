@@ -28,6 +28,7 @@ public class CloseInteractable : MonoBehaviour
         }
         canvasToggle.ToggleCanvas();
         objectAudio.clip = journalClosing;
+        objectAudio.volume = 0.28f;
         objectAudio.Play();
     }
 }

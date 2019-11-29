@@ -38,12 +38,13 @@ public class clickObject : MonoBehaviour
                     playerScript.LockJoystick();
 
                     objectAudio.clip = journalOpening;
+                        objectAudio.volume = 0.542f;
                     objectAudio.Play();
                     
                     UI.currentAnimator = rig.GetComponent<Animator>();
 
                     markingCanvasScript = rig.GetComponentInChildren<RemoveMarking>();
-                    markingCanvasScript.DestroyMarking();
+                    /*markingCanvasScript.DestroyMarking();*/
                 }
 
                 if (pUController.interactableHintInteger == 1)
@@ -80,12 +81,13 @@ public class clickObject : MonoBehaviour
                     playerScript.LockJoystick();
 
                     objectAudio.clip = journalOpening;
+                    objectAudio.volume = 0.42f;
                     objectAudio.Play();
 
                     UI.currentAnimator = rig.GetComponent<Animator>();
 
                     markingCanvasScript = rig.GetComponentInChildren<RemoveMarking>();
-                    markingCanvasScript.DestroyMarking();
+                    /*markingCanvasScript.DestroyMarking();*/
                 }
 
                 if (pUController.interactableHintInteger == 1)

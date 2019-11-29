@@ -3,6 +3,7 @@
 public class ToggleObjectCanvas : MonoBehaviour
 {
     private Canvas _infoCanvas;
+    public GameObject marking;
     
     private void Start()
     {
@@ -23,4 +24,12 @@ public class ToggleObjectCanvas : MonoBehaviour
         }
         print(_infoCanvas.enabled);
     }
+
+    public void removeMarking()
+    {
+
+        Destroy(marking);
+
+    }
+
 }

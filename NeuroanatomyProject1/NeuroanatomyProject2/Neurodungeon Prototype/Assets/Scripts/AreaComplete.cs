@@ -46,7 +46,7 @@ public class AreaComplete : MonoBehaviour
     void playScoreSound()
     {
 
-        gameManagementAudio.volume = 0.23f;
+        gameManagementAudio.volume = 0.32f;
         gameManagementAudio.clip = scoreSound;
         gameManagementAudio.Play();
 

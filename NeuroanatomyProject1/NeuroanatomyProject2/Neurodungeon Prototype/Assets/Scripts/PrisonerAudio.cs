@@ -16,7 +16,7 @@ public class PrisonerAudio : MonoBehaviour
 
         myAudio = GetComponent<AudioSource>();
 
-        myAudio.volume = 0.24f;
+        myAudio.volume = 0.29f;
         myAudio.clip = Crying;
         myAudio.Play();
 
@@ -35,7 +35,7 @@ public class PrisonerAudio : MonoBehaviour
         {
 
             prisonerSaved = true;
-            myAudio.volume = 0.36f;
+            myAudio.volume = 0.43f;
             myAudio.clip = Music;
             myAudio.Play();
 

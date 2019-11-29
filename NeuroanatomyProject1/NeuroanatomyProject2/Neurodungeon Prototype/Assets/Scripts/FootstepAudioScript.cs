@@ -92,7 +92,7 @@ public class FootstepAudioScript : MonoBehaviour
         {
 
             myAudio.PlayOneShot(rugFootstepOne);
-            myAudio.volume = Random.Range(0.1f, 0.16f);
+            myAudio.volume = Random.Range(0.17f, 0.22f);
             myAudio.pitch = Random.Range(0.6f, 1.3f);
 
         }
@@ -100,7 +100,7 @@ public class FootstepAudioScript : MonoBehaviour
         {
 
             myAudio.PlayOneShot(waterFootstepOne);
-            myAudio.volume = Random.Range(0.21f, 0.27f);
+            myAudio.volume = Random.Range(0.28f, 0.34f);
             myAudio.pitch = Random.Range(0.6f, 1.3f);
 
         }
@@ -108,7 +108,7 @@ public class FootstepAudioScript : MonoBehaviour
         {
 
             myAudio.PlayOneShot(footstepOne);
-            myAudio.volume = Random.Range(0.1f, 0.14f);
+            myAudio.volume = Random.Range(0.18f, 0.24f);
             myAudio.pitch = Random.Range(0.6f, 1.3f);
 
         }
@@ -123,7 +123,7 @@ public class FootstepAudioScript : MonoBehaviour
         {
 
             myAudio.PlayOneShot(rugFootstepTwo);
-            myAudio.volume = Random.Range(0.1f, 0.16f);
+            myAudio.volume = Random.Range(0.17f, 0.22f);
             myAudio.pitch = Random.Range(0.6f, 1.3f);
 
         }
@@ -131,7 +131,7 @@ public class FootstepAudioScript : MonoBehaviour
         {
 
             myAudio.PlayOneShot(waterFootstepTwo);
-            myAudio.volume = Random.Range(0.21f, 0.27f);
+            myAudio.volume = Random.Range(0.28f, 0.34f);
             myAudio.pitch = Random.Range(0.6f, 1.3f);
 
         }
@@ -139,7 +139,7 @@ public class FootstepAudioScript : MonoBehaviour
         {
 
             myAudio.PlayOneShot(footstepTwo);
-            myAudio.volume = Random.Range(0.1f, 0.14f);
+            myAudio.volume = Random.Range(0.18f, 0.24f);
             myAudio.pitch = Random.Range(0.6f, 1.3f);
 
         }
