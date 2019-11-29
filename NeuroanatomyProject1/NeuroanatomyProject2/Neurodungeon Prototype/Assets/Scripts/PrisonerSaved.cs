@@ -3,7 +3,7 @@
 public class PrisonerSaved : MonoBehaviour
 {
     public Transform waypoint;
-
+    public GameObject Smoke;
     public GameObject mainRoomAudio;
     AudioSource myAudio;
 
@@ -29,7 +29,9 @@ public class PrisonerSaved : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Instantiate(Smoke, transform.position, transform.rotation);
             transform.position = waypoint.position;
+
             mainRoomAudio.SetActive(true);
             myAudio.enabled = false;
             myCollider.enabled = false;
