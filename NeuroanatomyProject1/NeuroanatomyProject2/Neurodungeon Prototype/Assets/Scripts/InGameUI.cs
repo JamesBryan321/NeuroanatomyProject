@@ -139,8 +139,8 @@ public class InGameUI : MonoBehaviour
         answersAudio.clip = rightAnswer;
         answersAudio.Play();
         Score.score += 25;
-        GameObject Text = Instantiate(scorePlusPrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
-        Text.transform.SetParent(Canvas.transform);
+        GameObject Text = Instantiate(scorePlusPrefab, new Vector3(0f, 890f, 0f), Quaternion.identity);
+        Text.transform.SetParent(Canvas.transform, false);
         currentAnimator.SetBool("Correct", true);
        
     }
@@ -151,8 +151,8 @@ public class InGameUI : MonoBehaviour
         answersAudio.clip = wrongAnswer;
         answersAudio.Play();
         Score.score -= 25;
-        GameObject Text = Instantiate(scoreMinusPrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
-        Text.transform.SetParent(Canvas.transform);
+        GameObject Text = Instantiate(scoreMinusPrefab, new Vector3(0f, 890f, 0f), Quaternion.identity);
+        Text.transform.SetParent(Canvas.transform, false);
     }
 
 

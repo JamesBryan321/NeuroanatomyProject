@@ -54,7 +54,7 @@ public class BrainScript : MonoBehaviour
             myAudio.volume = Random.Range(0.67f, 0.73f);
             myAudio.pitch = Random.Range(0.9f, 1f);
             myAudio.Play();
-            myAnimator.Play("BrainHit");
+            myAnimator.SetTrigger("BrainIsHit");
             timer = time;
 
         }

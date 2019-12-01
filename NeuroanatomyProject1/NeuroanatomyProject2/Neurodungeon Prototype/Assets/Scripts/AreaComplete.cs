@@ -57,9 +57,9 @@ public class AreaComplete : MonoBehaviour
     if (pointsgiven == false) {
         pointsgiven = true;
         Score.score += 200;
-        GameObject Text = Instantiate(scorePrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
-        Text.transform.SetParent(Canvas.transform);
-        completeText.SetActive(true);
+            GameObject Text = Instantiate(scorePrefab, new Vector3(0f, 890f, 0f), Quaternion.identity);
+            Text.transform.SetParent(Canvas.transform, false);
+            completeText.SetActive(true);
         yield return new WaitForSeconds(2f);
         completeText.SetActive(false);
 

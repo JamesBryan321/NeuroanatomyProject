@@ -35,8 +35,8 @@ public class TorchScript : MonoBehaviour
             GetComponent<Collider>().enabled = false;
 
             Score.score += 25;
-            GameObject Text = Instantiate(scorePrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
-            Text.transform.SetParent(Canvas.transform);
+            GameObject Text = Instantiate(scorePrefab, new Vector3(0f, 890f, 0f), Quaternion.identity);
+            Text.transform.SetParent(Canvas.transform, false);
 
             foreach (GameObject fog in fogs)
             {

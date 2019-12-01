@@ -21,8 +21,8 @@ public class Destructable : MonoBehaviour
     {
         Instantiate(Destroyedversion, transform.position, transform.rotation);
         Score.score += 5;
-        GameObject Text = Instantiate(scorePrefab, new Vector3(520f, 1850f, 0f), Quaternion.identity);
-        Text.transform.SetParent(Canvas.transform);
+        GameObject Text = Instantiate(scorePrefab, new Vector3(0f, 890f, 0f), Quaternion.identity);
+        Text.transform.SetParent(Canvas.transform, false);
         Destroy(gameObject);
     }
 }
