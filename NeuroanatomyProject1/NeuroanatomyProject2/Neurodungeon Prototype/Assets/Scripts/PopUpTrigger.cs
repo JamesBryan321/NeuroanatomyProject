@@ -29,6 +29,11 @@ public class PopUpTrigger : MonoBehaviour
                 pUController.OpenPrisonerHint();
                 Destroy(this.gameObject);
             }
+            if (type == "Destructable")
+            {
+                pUController.OpenDestructableHint();
+                Destroy(this.gameObject);
+            }
         }
 
         

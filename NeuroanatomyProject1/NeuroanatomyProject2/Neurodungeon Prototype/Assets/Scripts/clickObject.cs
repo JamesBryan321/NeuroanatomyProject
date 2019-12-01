@@ -69,7 +69,7 @@ public class clickObject : MonoBehaviour
                     brainScript.BrainHit();
                     
                 }
-                }
+            }
             int tutorialMask = LayerMask.GetMask("Tutorial");
             if (Physics.Raycast(ray, out hitInfo, 1000, tutorialMask))
             {
@@ -88,6 +88,13 @@ public class clickObject : MonoBehaviour
 
                     markingCanvasScript = rig.GetComponentInChildren<RemoveMarking>();
                     /*markingCanvasScript.DestroyMarking();*/
+                }
+                if (rig.CompareTag ("Wood"))
+                {
+                        rig.gameObject.GetComponent<Destructable>().Break();
+                        pUController.CloseDestructableHint();
+                        pUController.destructableHintInteger = 0;
+                        playerScript.UnlockJoystick();
                 }
 
                 if (pUController.interactableHintInteger == 1)
