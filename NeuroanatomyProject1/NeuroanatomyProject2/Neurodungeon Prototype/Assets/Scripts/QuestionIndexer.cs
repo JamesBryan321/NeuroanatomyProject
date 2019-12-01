@@ -34,4 +34,8 @@ public class QuestionIndexer : MonoBehaviour
         qManager.EnableCorrectCanvas();
         revision.Question(questnumb, true);
     }
+    public void CorrectFinalTestProgress (Canvas next)
+    {
+        next.enabled = true;
+    }
 }
