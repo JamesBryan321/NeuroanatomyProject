@@ -20,9 +20,10 @@ public class Destructable : MonoBehaviour
     public void Break()
     {
         Instantiate(Destroyedversion, transform.position, transform.rotation);
+        Destroy(gameObject);
         Score.score += 5;
         GameObject Text = Instantiate(scorePrefab, new Vector3(0f, 890f, 0f), Quaternion.identity);
         Text.transform.SetParent(Canvas.transform, false);
-        Destroy(gameObject);
+
     }
 }
