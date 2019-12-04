@@ -11,6 +11,8 @@ public class TorchScript : MonoBehaviour
     public GameObject Canvas;
     public GameObject scorePrefab;
 
+    public GameObject comboScore;
+
     AudioSource myAudio;
 
     public List <GameObject>  fogs = new List <GameObject> ();
@@ -20,6 +22,8 @@ public class TorchScript : MonoBehaviour
         
         LightSourceOne.SetActive(false);
         LightSourceTwo.SetActive(false);
+
+        comboScore = GameObject.Find("GameManagement");
 
     }
 
@@ -37,6 +41,7 @@ public class TorchScript : MonoBehaviour
             Score.score += 25;
             GameObject Text = Instantiate(scorePrefab, new Vector3(0f, 890f, 0f), Quaternion.identity);
             Text.transform.SetParent(Canvas.transform, false);
+            comboScore.GetComponent<ComboScoreEarner>().torchCombo();
 
             foreach (GameObject fog in fogs)
             {

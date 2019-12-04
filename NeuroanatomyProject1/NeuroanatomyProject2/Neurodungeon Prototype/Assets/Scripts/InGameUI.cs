@@ -56,6 +56,8 @@ public class InGameUI : MonoBehaviour
 
     GameObject[] activetutorials;
 
+    public GameObject comboScore;
+
     public SceneAudioVolumeScript scriptA;
 
     public PopUpController popups;
@@ -75,7 +77,7 @@ public class InGameUI : MonoBehaviour
         
         myAudio = GetComponent<AudioSource>();
 
-        
+        comboScore = GameObject.Find("GameManagement");
 
         joystickOuter.enabled = true;
         joystickInner.enabled = true;
@@ -142,7 +144,8 @@ public class InGameUI : MonoBehaviour
         GameObject Text = Instantiate(scorePlusPrefab, new Vector3(0f, 890f, 0f), Quaternion.identity);
         Text.transform.SetParent(Canvas.transform, false);
         currentAnimator.SetBool("Correct", true);
-       
+        comboScore.GetComponent<ComboScoreEarner>().questionPlusCombo();
+
     }
     public void OnWrongAnswer()
     {
@@ -153,6 +156,7 @@ public class InGameUI : MonoBehaviour
         Score.score -= 25;
         GameObject Text = Instantiate(scoreMinusPrefab, new Vector3(0f, 890f, 0f), Quaternion.identity);
         Text.transform.SetParent(Canvas.transform, false);
+        comboScore.GetComponent<ComboScoreEarner>().questionMinusCombo();
     }
 
 

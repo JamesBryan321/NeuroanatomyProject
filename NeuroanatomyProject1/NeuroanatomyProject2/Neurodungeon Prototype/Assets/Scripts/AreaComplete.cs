@@ -17,9 +17,14 @@ public class AreaComplete : MonoBehaviour
     public GameObject Canvas;
     public GameObject scorePrefab;
 
+    public GameObject comboScore;
+
     bool pointsgiven = false;
 
-    
+    private void Start()
+    {
+        comboScore = GameObject.Find("GameManagement");
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -49,6 +54,8 @@ public class AreaComplete : MonoBehaviour
         gameManagementAudio.volume = 0.32f;
         gameManagementAudio.clip = scoreSound;
         gameManagementAudio.Play();
+
+        comboScore.GetComponent<ComboScoreEarner>().areaCombo();
 
     }
 
