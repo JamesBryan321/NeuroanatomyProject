@@ -1,21 +1,11 @@
 ﻿using UnityEngine;
-
-public class FogofWar : MonoBehaviour
+using System.Collections;
+public class FogOfWar : MonoBehaviour
 {
 
-    public GameObject Canvas;
-    public GameObject scorePrefab;
-
-    private void OnTriggerEnter(Collider collision)
+    IEnumerator Destroy ()
     {
-        //Checks for player collision on fog pieces, if yes, it destroys the fog and gives score
-        if (collision.gameObject.CompareTag ("Player"))
-        {
-            
-
-            
-
-            Destroy(gameObject);
-        }
+        yield return new WaitForSeconds(1.3f);
+        Destroy(gameObject);
     }
 }

@@ -40,7 +40,8 @@ public class TorchScript : MonoBehaviour
 
             foreach (GameObject fog in fogs)
             {
-                fog.GetComponent<Animator>().SetBool("cleared", true);               
+                fog.GetComponent<Animator>().SetBool("cleared", true);
+                fog.GetComponent<FogOfWar>().StartCoroutine("Destroy");
                 
             }
             if (UncoverMap == true)
