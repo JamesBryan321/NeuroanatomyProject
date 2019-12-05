@@ -22,7 +22,6 @@ public class ToggleObjectCanvas : MonoBehaviour
         {
             _infoCanvas.enabled = false;
         }
-        print(_infoCanvas.enabled);
     }
 
     public void removeMarking()

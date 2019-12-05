@@ -145,7 +145,6 @@ public class InGameUI : MonoBehaviour
         Text.transform.SetParent(Canvas.transform, false);
         currentAnimator.SetBool("Correct", true);
         comboScore.GetComponent<ComboScoreEarner>().questionPlusCombo();
-
     }
     public void OnWrongAnswer()
     {
