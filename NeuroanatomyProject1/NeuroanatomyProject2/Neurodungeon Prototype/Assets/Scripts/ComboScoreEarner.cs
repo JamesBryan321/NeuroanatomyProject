@@ -23,7 +23,7 @@ public class ComboScoreEarner : MonoBehaviour
 
         destructablesScore = 0f;
         torchScore = 0f;
-        areaScore = -1f;
+        areaScore = 0f;
         questionScore = 0f;
 
     }

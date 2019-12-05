@@ -42,18 +42,17 @@ public class TorchScript : MonoBehaviour
             GameObject Text = Instantiate(scorePrefab, new Vector3(0f, 890f, 0f), Quaternion.identity);
             Text.transform.SetParent(Canvas.transform, false);
             comboScore.GetComponent<ComboScoreEarner>().torchCombo();
-
-            foreach (GameObject fog in fogs)
-            {
-                fog.GetComponent<Animator>().SetBool("cleared", true);
-                fog.GetComponent<FogOfWar>().StartCoroutine("Destroy");
-                
-            }
             if (UncoverMap == true)
             {
                 MapPart.SetActive(true);
             }
-
+            foreach (GameObject fog in fogs)
+            {
+                if (fog != null) { 
+                fog.GetComponent<Animator>().SetBool("cleared", true);
+                fog.GetComponent<FogOfWar>().StartCoroutine("Destroy");
+                }
+            }
         }
 
     }

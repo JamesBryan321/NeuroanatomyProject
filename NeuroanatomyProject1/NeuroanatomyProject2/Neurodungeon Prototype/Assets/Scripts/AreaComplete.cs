@@ -42,9 +42,9 @@ public class AreaComplete : MonoBehaviour
             
             
 
-            playScoreSound();
+            
 
-            StartCoroutine("TextUI");
+            StartCoroutine("AreaCompletion");
         }
     }
 
@@ -55,26 +55,21 @@ public class AreaComplete : MonoBehaviour
         gameManagementAudio.clip = scoreSound;
         gameManagementAudio.Play();
 
-        comboScore.GetComponent<ComboScoreEarner>().areaCombo();
-
     }
 
-    IEnumerator TextUI ()
+    IEnumerator AreaCompletion ()
     {
     if (pointsgiven == false) {
-        pointsgiven = true;
-        Score.score += 200;
+            pointsgiven = true;
+            playScoreSound();
+            comboScore.GetComponent<ComboScoreEarner>().areaCombo();
+            Score.score += 200;
             GameObject Text = Instantiate(scorePrefab, new Vector3(0f, 890f, 0f), Quaternion.identity);
             Text.transform.SetParent(Canvas.transform, false);
             completeText.SetActive(true);
-        yield return new WaitForSeconds(2f);
-        completeText.SetActive(false);
-
-       
-
-
-        Destroy(this);
+            yield return new WaitForSeconds(2f);
+            completeText.SetActive(false);
+            Destroy(this);
          }
     }
-
 }
