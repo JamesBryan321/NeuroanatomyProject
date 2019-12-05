@@ -8,6 +8,8 @@ public class DoorAudioScript : MonoBehaviour
     public AudioClip debrisSmashing;
     public AudioClip spikes;
     public AudioClip axeSwing;
+    public AudioClip portcullisOpen;
+    public AudioClip portcullisClose;
 
     AudioSource myAudio;
 
@@ -55,6 +57,22 @@ public class DoorAudioScript : MonoBehaviour
     {
 
         myAudio.clip = axeSwing;
+        myAudio.Play();
+
+    }
+
+    void portcullisOpenAudio()
+    {
+
+        myAudio.clip = portcullisOpen;
+        myAudio.Play();
+
+    }
+
+    void portcullisCloseAudio()
+    {
+
+        myAudio.clip = portcullisClose;
         myAudio.Play();
 
     }
