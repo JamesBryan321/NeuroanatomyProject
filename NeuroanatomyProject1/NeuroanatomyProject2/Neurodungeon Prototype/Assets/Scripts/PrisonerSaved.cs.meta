@@ -3,7 +3,11 @@ guid: f986f6cf503db104993ca007c72d84c7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - waypoint: {instanceID: 0}
+  - Smoke: {instanceID: 0}
+  - mainRoomAudio: {instanceID: 0}
+  - escapeAudioPrefab: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -76,7 +76,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4293454079
-  m_fontColor: {r: 1, g: 0.9103774, b: 0.9103774, a: 1}
+  m_fontColor: {r: 0.6792453, g: 0.55428976, b: 0.55428976, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 2
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -199,9 +199,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e7ffc81c34d676549be31887c87a439a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0a18f45d7576d974dbeb3bc3470ab3f0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.02
+  m_Volume: 0.11
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -6,6 +6,7 @@ public class PrisonerSaved : MonoBehaviour
     public GameObject Smoke;
     public GameObject mainRoomAudio;
     AudioSource myAudio;
+    public GameObject escapeAudioPrefab;
 
     private Collider myCollider;
     
@@ -29,6 +30,7 @@ public class PrisonerSaved : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Instantiate(escapeAudioPrefab, transform.position, transform.rotation);
             Instantiate(Smoke, transform.position, transform.rotation);
             transform.position = waypoint.position;
 
