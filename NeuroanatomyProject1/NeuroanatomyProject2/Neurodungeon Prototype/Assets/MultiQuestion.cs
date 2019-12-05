@@ -66,6 +66,7 @@ public class MultiQuestion : MonoBehaviour
                 {
                     Wrong();
             }
+            Reset();
         }
     }
     void Right ()
@@ -92,6 +93,10 @@ public class MultiQuestion : MonoBehaviour
         option4.SetActive(true);
         previous = 0;
     }
-
+    public void Reset()
+    {
+        if (previous == 3)
+        previous = 0;
+    }
 
 }
