@@ -62,6 +62,9 @@ public class InGameUI : MonoBehaviour
 
     public PopUpController popups;
     public List<GameObject> activepopups = new List<GameObject>();
+    public Canvas[] activecanvases;
+    public Player playerjoystick;
+    public Canvas place;
 
     public void Start()
     {
@@ -85,13 +88,30 @@ public class InGameUI : MonoBehaviour
         
 
     }
-    
+    Canvas[] FindCanvasWithLayer(int layer) {
+        Canvas[] goArray = FindObjectsOfType(typeof(Canvas)) as Canvas[];
+        List <Canvas> goList = new List<Canvas>();
+        for (int i = 0; i < goArray.Length; i++) {
+            if (goArray[i].gameObject.layer == layer && goArray [i].enabled == true) {
+                goList.Add(goArray[i]); 
+            }
+        }
+        if (goList.Count == 0) {
+            goList.Add(place);
+        }
+        return goList.ToArray();
+    }
     public void OpenMenu()
     {
         //Handles the in game menu that can be opened anytime
-       
+            
             if (ingamemenu.activeSelf == false)
             {
+              activecanvases = FindCanvasWithLayer(5);
+                for (int i = 0; i < activecanvases.Length; i++)
+                {
+                activecanvases[i].enabled = false;
+                }           
             for (int i = 0; i < popups.popUps.Length; i++)
             {
                 if (popups.popUps [i].activeSelf == true)
@@ -99,7 +119,7 @@ public class InGameUI : MonoBehaviour
                     activepopups.Add(popups.popUps[i]);
                     popups.popUps[i].SetActive (false);
                 }
-            }
+            }           
                 clickObject.canInteract = false;
                 ingamemenu.SetActive (true);
                 OnMapButton();
@@ -112,6 +132,11 @@ public class InGameUI : MonoBehaviour
                 {
                   popup.SetActive(true);
                 }
+                     for (int i = 0; i < activecanvases.Length; i++)
+                     {
+                       activecanvases[i].enabled = true;
+                       activecanvases[i] = null;
+                     }
                 activepopups.Clear();
                 ingamemenu.SetActive (false);
                 v1Index.enabled = false;
@@ -120,6 +145,7 @@ public class InGameUI : MonoBehaviour
                 JournalClosingSound();
                 AmbienceVolumeHigher();
                 clickObject.canInteract = true;
+                playerjoystick.UnlockJoystick();
         }
     }
     IEnumerator OnGameStart()
@@ -189,6 +215,7 @@ public class InGameUI : MonoBehaviour
         //Handles the "menu" section on in game ui
         if (MenuButton.activeSelf == false)
         {
+            
             RevisionButton.SetActive(false);
             MenuButton.SetActive(true);
             WikiButton.SetActive(false);
