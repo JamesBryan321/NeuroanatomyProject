@@ -611,6 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de87e82ec1bfd904abe1ac04b168bb6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marking: {fileID: 0}
 --- !u!1 &664380801296710002
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,6 +836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de87e82ec1bfd904abe1ac04b168bb6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marking: {fileID: 0}
 --- !u!1 &746595608643540158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,6 +2864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de87e82ec1bfd904abe1ac04b168bb6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marking: {fileID: 0}
 --- !u!1 &4355081489616599456
 GameObject:
   m_ObjectHideFlags: 0
@@ -3159,6 +3162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de87e82ec1bfd904abe1ac04b168bb6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marking: {fileID: 0}
 --- !u!1 &4642039476351552949
 GameObject:
   m_ObjectHideFlags: 0
@@ -4021,6 +4025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de87e82ec1bfd904abe1ac04b168bb6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marking: {fileID: 0}
 --- !u!1 &5608375686539225211
 GameObject:
   m_ObjectHideFlags: 0
@@ -5249,8 +5254,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.2131577, y: 1.4039636, z: 1}
-  m_Center: {x: 0.029556274, y: 0.20198178, z: 0}
+  m_Size: {x: 3.2131577, y: 2.175111, z: 1}
+  m_Center: {x: 0.029556226, y: 0.58755535, z: 0}
 --- !u!114 &8994806159933144260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5263,6 +5268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de87e82ec1bfd904abe1ac04b168bb6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marking: {fileID: 0}
 --- !u!82 &674452602
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5393,6 +5399,10 @@ MonoBehaviour:
   Unlocking: {fileID: 0}
   Opening: {fileID: 0}
   debrisSmashing: {fileID: 8300000, guid: 1c88a54e0f37f5640ab1e8688adcc7cb, type: 3}
+  spikes: {fileID: 0}
+  axeSwing: {fileID: 0}
+  portcullisOpen: {fileID: 0}
+  portcullisClose: {fileID: 0}
 --- !u!114 &6934322889294599453
 MonoBehaviour:
   m_ObjectHideFlags: 0
