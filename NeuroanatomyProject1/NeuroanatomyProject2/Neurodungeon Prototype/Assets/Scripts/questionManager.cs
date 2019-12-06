@@ -22,7 +22,7 @@ public class questionManager : MonoBehaviour
 
     public void EnableWrongCanvas1()
     {
-        Debug.Log("Here's why you're wrong...");
+      //  Debug.Log("Here's why you're wrong...");
         /*this is currently disabled as darren hasn't provided the explanations
         instead a correct/wrong answer will just close the question, then when
         we have the explanations we need only re-enable this line of code and 
@@ -33,7 +33,7 @@ public class questionManager : MonoBehaviour
     
     public void EnableWrongCanvas2()
     {
-       Debug.Log("Here's why you're wrong...");
+      // Debug.Log("Here's why you're wrong...");
        /*this is currently disabled as darren hasn't provided the explanations
         instead a correct/wrong answer will just close the question, then when
         we have the explanations we need only re-enable this line of code and 
@@ -44,7 +44,7 @@ public class questionManager : MonoBehaviour
     
     public void EnableWrongCanvas3()
     {
-        Debug.Log("Here's why you're wrong...");
+      //  Debug.Log("Here's why you're wrong...");
         /*this is currently disabled as darren hasn't provided the explanations
         instead a correct/wrong answer will just close the question, then when
         we have the explanations we need only re-enable this line of code and 
@@ -55,7 +55,7 @@ public class questionManager : MonoBehaviour
     
     public void EnableCorrectCanvas()
     {
-        Debug.Log("Here's why you're right!");
+      //  Debug.Log("Here's why you're right!");
        /*this is currently disabled as darren hasn't provided the explanations
         instead a correct/wrong answer will just close the question, then when
         we have the explanations we need only re-enable this line of code and 
