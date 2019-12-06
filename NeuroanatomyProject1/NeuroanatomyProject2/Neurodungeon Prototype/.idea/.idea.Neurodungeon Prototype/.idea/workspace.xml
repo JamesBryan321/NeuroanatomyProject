@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b7c0f36-7b4f-4c5e-b0b7-1b935537c8c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Interactable Prefabs/Bed_Ruined.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interactable Prefabs/Bed_Ruined.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Interactable Prefabs/Book_Open.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interactable Prefabs/Book_Open.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Interactable Prefabs/Book_Pile_Large.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interactable Prefabs/Book_Pile_Large.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Interactable Prefabs/Book_Pile_Small.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interactable Prefabs/Book_Pile_Small.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Interactable Prefabs/Bookshelf_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interactable Prefabs/Bookshelf_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Interactable Prefabs/Debris 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interactable Prefabs/Debris 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Interactable Prefabs/Debris 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interactable Prefabs/Debris 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Interactable Prefabs/Lectern.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interactable Prefabs/Lectern.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Interactable Prefabs/Skull.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interactable Prefabs/Skull.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Interactable Prefabs/Spike_Trap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interactable Prefabs/Spike_Trap.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Interactable Prefabs/Spin_Blade_Trap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Interactable Prefabs/Spin_Blade_Trap.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/skullFragment.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/skullFragment.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/questionManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="535">
-              <caret line="45" column="77" lean-forward="true" selection-start-line="45" selection-start-column="77" selection-end-line="45" selection-end-column="77" />
+              <caret line="45" column="77" selection-start-line="45" selection-start-column="77" selection-end-line="45" selection-end-column="77" />
               <folding>
                 <marker date="1575601645019" expanded="false" signature="6:78" ph="..." />
                 <marker date="1575601645019" expanded="true" signature="124:1236" ph="{...}" />
@@ -36,6 +27,24 @@
                 <marker date="1575601645019" expanded="true" signature="825:931" ph="{...}" />
                 <marker date="1575601645019" expanded="true" signature="974:1079" ph="{...}" />
                 <marker date="1575601645019" expanded="true" signature="1089:1234" ph="/* maybe change the code within these just to re-enable the Joystick ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/QuestionIndexer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="472">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <marker date="1575587732266" expanded="true" signature="64:871" ph="{...}" />
+                <marker date="1575587732266" expanded="true" signature="200:272" ph="{...}" />
+                <marker date="1575587732266" expanded="true" signature="298:394" ph="{...}" />
+                <marker date="1575587732266" expanded="true" signature="424:520" ph="{...}" />
+                <marker date="1575587732266" expanded="true" signature="550:646" ph="{...}" />
+                <marker date="1575587732266" expanded="true" signature="677:773" ph="{...}" />
+                <marker date="1575587732266" expanded="true" signature="828:869" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -162,7 +171,7 @@
       <facet id="riderModule/invalid/Default Android Facet" />
     </ignored-facets>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="443" />
     <option name="y" value="111" />
     <option name="width" value="1145" />
@@ -248,7 +257,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="443" y="111" width="1145" height="930" extended-state="0" />
+    <frame x="443" y="111" width="1145" height="930" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.10506912" />
@@ -340,21 +349,6 @@
             <marker date="1574362567666" expanded="true" signature="869:1010" ph="{...}" />
             <marker date="1574362567666" expanded="true" signature="1037:1451" ph="{...}" />
             <marker date="1574362567666" expanded="true" signature="1074:1445" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/QuestionIndexer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
-          <folding>
-            <marker date="1574112113490" expanded="true" signature="64:775" ph="{...}" />
-            <marker date="1574112113490" expanded="true" signature="200:272" ph="{...}" />
-            <marker date="1574112113490" expanded="true" signature="298:394" ph="{...}" />
-            <marker date="1574112113490" expanded="true" signature="424:520" ph="{...}" />
-            <marker date="1574112113490" expanded="true" signature="550:646" ph="{...}" />
-            <marker date="1574112113490" expanded="true" signature="677:773" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -576,7 +570,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/questionManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="535">
-          <caret line="45" column="77" lean-forward="true" selection-start-line="45" selection-start-column="77" selection-end-line="45" selection-end-column="77" />
+          <caret line="45" column="77" selection-start-line="45" selection-start-column="77" selection-end-line="45" selection-end-column="77" />
           <folding>
             <marker date="1575601645019" expanded="false" signature="6:78" ph="..." />
             <marker date="1575601645019" expanded="true" signature="124:1236" ph="{...}" />
@@ -586,6 +580,22 @@
             <marker date="1575601645019" expanded="true" signature="825:931" ph="{...}" />
             <marker date="1575601645019" expanded="true" signature="974:1079" ph="{...}" />
             <marker date="1575601645019" expanded="true" signature="1089:1234" ph="/* maybe change the code within these just to re-enable the Joystick ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/QuestionIndexer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <marker date="1575587732266" expanded="true" signature="64:871" ph="{...}" />
+            <marker date="1575587732266" expanded="true" signature="200:272" ph="{...}" />
+            <marker date="1575587732266" expanded="true" signature="298:394" ph="{...}" />
+            <marker date="1575587732266" expanded="true" signature="424:520" ph="{...}" />
+            <marker date="1575587732266" expanded="true" signature="550:646" ph="{...}" />
+            <marker date="1575587732266" expanded="true" signature="677:773" ph="{...}" />
+            <marker date="1575587732266" expanded="true" signature="828:869" ph="{...}" />
           </folding>
         </state>
       </provider>
