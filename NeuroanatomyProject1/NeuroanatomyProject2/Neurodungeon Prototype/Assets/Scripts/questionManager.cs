@@ -41,4 +41,7 @@ public class questionManager : MonoBehaviour
        // Debug.Log("Here's why you're right!");
         correctAnswerCanvas.enabled = true;
     }
+    
+    /*maybe change the code within these just to re-enable the Joystick
+        that way the lack of "reason you're right/wrong" won't be evident x*/
 }

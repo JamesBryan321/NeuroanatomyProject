@@ -35,6 +35,7 @@
         <e p="Materials" t="Include">
           <e p="Fog-Altitude.shader" t="Include" />
         </e>
+        <e p="MultiQuestion.cs" t="Include" />
         <e p="Polygonal Particles" t="Include">
           <e p="Assets" t="Include">
             <e p="Shaders" t="Include">
@@ -48,12 +49,15 @@
           <e p="AudioForLooseObjects.cs" t="Include" />
           <e p="AudioHittingLooseObjects.cs" t="Include" />
           <e p="AudioScriptForRollingObjects.cs" t="Include" />
+          <e p="BrainScript.cs" t="Include" />
           <e p="clickObject.cs" t="Include" />
           <e p="CloseInteractable.cs" t="Include" />
           <e p="ClosePopUp.cs" t="Include" />
+          <e p="ComboScoreEarner.cs" t="Include" />
           <e p="Destructable.cs" t="Include" />
           <e p="DoorAudioScript.cs" t="Include" />
           <e p="EyeScript.cs" t="Include" />
+          <e p="FinalTest.cs" t="Include" />
           <e p="FogArea.cs" t="Include" />
           <e p="FogofWar.cs" t="Include" />
           <e p="FootstepAudioScript.cs" t="Include" />
@@ -66,7 +70,9 @@
           <e p="PopUpController.cs" t="Include" />
           <e p="PopUpTrigger.cs" t="Include" />
           <e p="PrisonerAudio.cs" t="Include" />
+          <e p="PrisonerEscapeAudioDestroy.cs" t="Include" />
           <e p="PrisonerSaved.cs" t="Include" />
+          <e p="PrisonerSniffingAudioScirpt.cs" t="Include" />
           <e p="QuestionIndexer.cs" t="Include" />
           <e p="questionManager.cs" t="Include" />
           <e p="QuestionRevisionManager.cs" t="Include" />
@@ -76,6 +82,8 @@
           <e p="ScoreEarnedDestroyScript.cs" t="Include" />
           <e p="SliderValueText.cs" t="Include" />
           <e p="SmashingObjectsAudioScript.cs" t="Include" />
+          <e p="SwingingAxeAudio.cs" t="Include" />
+          <e p="TeethShattering.cs" t="Include" />
           <e p="ToggleObjectCanvas.cs" t="Include" />
           <e p="TorchAudioScript.cs" t="Include" />
           <e p="TorchScript.cs" t="Include" />
