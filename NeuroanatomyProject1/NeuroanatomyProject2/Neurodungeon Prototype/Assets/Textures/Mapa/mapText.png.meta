@@ -128,6 +128,27 @@ TextureImporter:
       name: mapText_0
       rect:
         serializedVersion: 2
+        x: 116
+        y: 1204
+        width: 210
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf2fc0074bf6e245aaa36b42d9ebfd9
+      internalID: 1936934510485785464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mapText_1
+      rect:
+        serializedVersion: 2
         x: 630
         y: 1120
         width: 43
@@ -139,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb3630a0a79d544a4a62471ea8da0c20
-      internalID: 1936934510485785464
+      spriteID: 7f8ad4e650c79384487bde6e3bae0142
+      internalID: -5592989061209081371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mapText_1
+      name: mapText_2
       rect:
         serializedVersion: 2
         x: 817
@@ -160,28 +181,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 447320445e2474c44b8583c1cc5105f9
-      internalID: -5592989061209081371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mapText_2
-      rect:
-        serializedVersion: 2
-        x: 134
-        y: 1068
-        width: 210
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a9f077419dfa47eca7594823dcc65d1
+      spriteID: e3526380db67e244a91b5ed8339f8cab
       internalID: -1946806777594460068
       vertices: []
       indices: 
@@ -189,6 +189,27 @@ TextureImporter:
       weights: []
     - serializedVersion: 2
       name: mapText_3
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1102
+        width: 56
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1771879a6e17e7b4288a0367ecb334b3
+      internalID: 69534751302309279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mapText_4
       rect:
         serializedVersion: 2
         x: 614
@@ -202,28 +223,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00ea640becbdc41bb95e1fda3cfd91c6
-      internalID: 69534751302309279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mapText_4
-      rect:
-        serializedVersion: 2
-        x: 324
-        y: 966
-        width: 56
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce01a3842efe448d18e2c2d734d50c61
+      spriteID: cc6691ca2cf46d645a5835f14adb1456
       internalID: 6843359662063477445
       vertices: []
       indices: 
@@ -231,6 +231,48 @@ TextureImporter:
       weights: []
     - serializedVersion: 2
       name: mapText_5
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 1060
+        width: 218
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717e8d17e9e829b49a2324c6a06fbd7a
+      internalID: -4978390046487732041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mapText_6
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 905
+        width: 156
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e03928dbb9ae24eba05ccc7d98c519
+      internalID: -8017267275843022615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mapText_7
       rect:
         serializedVersion: 2
         x: 523
@@ -244,49 +286,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a034eb9b0bb0a485a8faab1e2141a059
-      internalID: -4978390046487732041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mapText_6
-      rect:
-        serializedVersion: 2
-        x: 650
-        y: 945
-        width: 218
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 973b5d2227a0946d1b03fbe31aab4bae
-      internalID: -8017267275843022615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mapText_7
-      rect:
-        serializedVersion: 2
-        x: 367
-        y: 861
-        width: 156
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1b920110a781476bad8193e0e5532e6
+      spriteID: 2549ced8c4cee1541b4865f16c1dc032
       internalID: 1496706449854314922
       vertices: []
       indices: 
@@ -307,7 +307,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84bbbfcf6779b4b07ab2a546e0ab5bd8
+      spriteID: a98a6855146bf344aa6713b77c51abe3
       internalID: -6268600332742285945
       vertices: []
       indices: 
