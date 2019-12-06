@@ -17,6 +17,7 @@ public class clickObject : MonoBehaviour
 
     void Update () 
     {
+        print(canInteract);
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
         if (Input.GetMouseButtonDown(0))
