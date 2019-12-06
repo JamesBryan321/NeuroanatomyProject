@@ -6,6 +6,7 @@ public class FinalTest : MonoBehaviour
 {
     public Animator anim;
     public GameObject finaltestgameobject;
+    public Player player;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag ("Player"))
@@ -20,5 +21,7 @@ public class FinalTest : MonoBehaviour
     {
         anim.SetBool("close", false);
         finaltestgameobject.tag = "notInteractable";
+        player.UnlockJoystick();
+        
     }
 }
