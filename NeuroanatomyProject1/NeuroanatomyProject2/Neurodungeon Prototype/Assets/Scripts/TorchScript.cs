@@ -52,11 +52,12 @@ public class TorchScript : MonoBehaviour
             }
             if (UncoverPlayer == true)
             {
+                playerpos.SetActive(true);
                 for (int i = 0; i < InGameUI.playerpositions.Length; i++)
                 {
                     InGameUI.playerpositions[i].SetActive (false);
                 }
-                playerpos.SetActive(true);
+
             }
             foreach (GameObject fog in fogs)
             {
