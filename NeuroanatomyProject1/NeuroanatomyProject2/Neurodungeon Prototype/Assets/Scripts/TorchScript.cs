@@ -45,18 +45,15 @@ public class TorchScript : MonoBehaviour
             GameObject Text = Instantiate(scorePrefab, new Vector3(0f, 890f, 0f), Quaternion.identity);
             Text.transform.SetParent(Canvas.transform, false);
             comboScore.GetComponent<ComboScoreEarner>().torchCombo();
-            InGameUI.playerpositions = GameObject.FindGameObjectsWithTag("Position");
             if (UncoverMap == true)
             {
                 MapPart.SetActive(true);
             }
             if (UncoverPlayer == true)
             {
+                InGameUI.previousplayerposition.SetActive(false);
+                InGameUI.previousplayerposition = playerpos;
                 playerpos.SetActive(true);
-                for (int i = 0; i < InGameUI.playerpositions.Length; i++)
-                {
-                    InGameUI.playerpositions[i].SetActive (false);
-                }
 
             }
             foreach (GameObject fog in fogs)

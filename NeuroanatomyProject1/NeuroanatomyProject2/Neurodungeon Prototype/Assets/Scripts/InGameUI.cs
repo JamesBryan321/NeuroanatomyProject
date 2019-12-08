@@ -66,11 +66,14 @@ public class InGameUI : MonoBehaviour
     public Player playerjoystick;
     public Canvas place;
 
-    public static GameObject[] playerpositions;
+    public static GameObject previousplayerposition;
+    public GameObject firstposition;
 
     public void Start()
     {
+
         //Initialises things when opening the scene
+        previousplayerposition = firstposition;
         StartCoroutine("OnGameStart");
 
         question1.SetActive(false);
