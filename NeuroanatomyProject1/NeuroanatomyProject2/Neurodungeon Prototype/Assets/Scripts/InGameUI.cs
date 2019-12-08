@@ -66,6 +66,8 @@ public class InGameUI : MonoBehaviour
     public Player playerjoystick;
     public Canvas place;
 
+    public static GameObject[] playerpositions;
+
     public void Start()
     {
         //Initialises things when opening the scene
