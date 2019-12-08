@@ -18,6 +18,7 @@ public class QuestionRevisionManager : MonoBehaviour
     public GameObject question11;
     public GameObject question12;
     public GameObject question13;
+    public GameObject question14;
     public GameObject ingameUI;
     private void Start()
     {
@@ -111,5 +112,10 @@ public class QuestionRevisionManager : MonoBehaviour
     {
         ingameUI.SetActive(false);
         question13.GetComponent<Canvas>().enabled = true;
+    }
+    public void Question14()
+    {
+        ingameUI.SetActive(false);
+        question14.GetComponent<Canvas>().enabled = true;
     }
 }
